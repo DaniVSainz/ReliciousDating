@@ -10,6 +10,10 @@ ready = function(){
     });
 }
 
-$(document).ready(ready);
-// if using turbolinks
+$( document ).ready(function() {
+  $('.chosen-select').chosen({
+      no_results_text: 'No results matched'
+  });
+});
+
 $(document).on("page:load",ready);

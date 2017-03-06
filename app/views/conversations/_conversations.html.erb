@@ -9,7 +9,7 @@
       </div>
       <div class="media-body">
         <h4 class="media-heading">
-          <%= message.sender.name %> <br>
+          <%= message.sender %> <br>
           <small><b>Subject: </b><%= message.subject %></small><br>
           <small><b>Date: </b><%=  message.created_at.strftime("%A, %b %d, %Y at %I:%M%p") %></small>
         </h4>
