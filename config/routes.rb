@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :profiles
   devise_for :users, class_name: 'FormUser', :controllers => { omniauth_callbacks: 'omniauth_callbacks', registrations: 'registrations'}
   root 'welcome#index'
   devise_scope :user do
@@ -11,6 +12,7 @@ Rails.application.routes.draw do
   get "mailbox/inbox" => "mailbox#inbox", as: :mailbox_inbox
   get "mailbox/sent" => "mailbox#sent", as: :mailbox_sent
   get "mailbox/trash" => "mailbox#trash", as: :mailbox_trash
+  resources :profile
   resources :conversations do
   member do
     post :reply
