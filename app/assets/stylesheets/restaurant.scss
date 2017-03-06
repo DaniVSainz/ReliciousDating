@@ -1,9 +1,7 @@
-// Place all the styles related to the Profiles controller here.
+// Place all the styles related to the Restaurant controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
-//////////////NAV BAR///////////////////////////
-
+///////////NAV BAR//////////////
 #nav-trigger {
   display: none;
   text-align: center;
@@ -90,3 +88,15 @@ nav#nav-mobile {
 
 /* =Media Queries
 -------------------------------------------------------------- */
+// @media all and (max-width: 900px)
+//  @media (max-width: 400px){
+//   #nav-trigger {
+//     display: block;
+//   }
+//
+//   nav#nav-main {
+//     display: none; }
+//
+//   nav#nav-mobile {
+//     display: block; }
+// }
