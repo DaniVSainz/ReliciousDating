@@ -1,3 +1,367 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  font-family: 'Raleway';
+  background-size: auto;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 auto;
+}
+
+.ParallaxVideo{
+height: 300px;
+padding-bottom: 50px;
+padding-top: 50px;
+}
+.ParallaxVideo video{
+
+min-width: 100%;
+position: fixed;
+top:0;
+z-index: -999;
+}
+.ParallaxVideo h1 {
+color: #fff;
+font-size: 36px;
+font-weight: 200;
+text-align: center;
+
+}
+
+.logo {
+  color: #FFFCF0;
+  font-weight: 500;
+  text-align: center;
+  padding: 0;
+  margin: 138px auto;
+  font-size: 15em;
+  font-family: 'Isabella Script';
+}
+
+@font-face {
+	font-family: 'Isabella Script';
+	src: font-url("Isabella_Script.woff");
+}
+
+@font-face {
+	font-family: 'Raleway';
+	src: font-url("raleway.woff");
+}
+
+
+
+//RESGISTER/LOGIN ANIMATION/STYLING//
+.signupmainbox {
+  text-align: -webkit-center;
+  margin: 0 auto;
+  padding: 0;
+
+}
+
+#linkdecomainpage1 {
+  text-decoration: none;
+  color: #FFFCF0;
+  font-size:1.5em;
+
+}
+
+.hvr-float {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-float:hover, .hvr-float:focus, .hvr-float:active {
+  -webkit-transform: translateY(-8px);
+  transform: translateY(-8px);
+}
+
+
+#linkdecomainpage2 {
+  text-decoration: none;
+  color: #FFFCF0;
+  font-size:1.5em;
+  padding-left: 10px;
+}
+
+//MEDIA QUERIES//
+/* ----------- iPhone 4 and 4S ----------- */
+
+/* Portrait and Landscape */
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .logo {
+      font-size: 7.5em;
+    }
+
+}
+
+/* Portrait */
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+    .logo {
+      font-size: 7.5em;
+    }
+}
+
+/* Landscape */
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+    .logo {
+      font-size: 7.5em;
+    }
+}
+
+/* ----------- iPhone 5 and 5S ----------- */
+
+/* Portrait and Landscape */
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .logo {
+      font-size: 7em;
+      position: relative;
+      bottom: 26px;
+      margin: 187px auto;
+    }
+}
+
+/* Portrait */
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+    font-size: 7em;
+    position: relative;
+    bottom: 26px;
+    margin: 187px auto;
+}
+
+/* Landscape */
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+    font-size: 7em;
+    position: relative;
+    bottom: 26px;
+    margin: 187px auto;
+}
+
+/* ----------- iPhone 6 ----------- */
+
+/* Portrait and Landscape */
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .logo {
+      font-size: 7.5em;
+    }
+}
+
+/* Portrait */
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+    .logo {
+      font-size: 7.5em;
+    }
+}
+
+/* Landscape */
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+    .logo {
+      font-size: 7.5em;
+    }
+}
+
+/* ----------- iPhone 6+ ----------- */
+
+/* Portrait and Landscape */
+@media only screen
+  and (min-device-width: 414px)
+  and (max-device-width: 736px)
+  and (-webkit-min-device-pixel-ratio: 3) {
+    .logo {
+      font-size: 8.5em;
+    }
+}
+
+/* Portrait */
+@media only screen
+  and (min-device-width: 414px)
+  and (max-device-width: 736px)
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) {
+    .logo {
+      font-size: 8.5em;
+    }
+}
+
+/* Landscape */
+@media only screen
+  and (min-device-width: 414px)
+  and (max-device-width: 736px)
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) {
+    .logo {
+      font-size: 8.5em;
+    }
+}
+
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)  {
+  body {
+    background-size: cover;
+    // background-position: center;
+    background-repeat: no-repeat;
+    height: 117vh;
+    width: 100vh;
+  }
+
+.logo {
+    text-align: -webkit-left;
+    padding: 98px;
+    position: relative;
+    left: 117px;
+    font-size: 19.5em;
+  }
+}
+/* ----------- Galaxy S3 ----------- */
+
+/* Portrait and Landscape */
+@media screen
+  and (device-width: 320px)
+  and (device-height: 640px)
+  and (-webkit-device-pixel-ratio: 2) {
+
+    .logo {
+      font-size: 7.5em;
+    }
+}
+
+/* Portrait */
+@media screen
+  and (device-width: 320px)
+  and (device-height: 640px)
+  and (-webkit-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+    .logo {
+      font-size: 7.5em;
+    }
+}
+
+/* Landscape */
+@media screen
+  and (device-width: 320px)
+  and (device-height: 640px)
+  and (-webkit-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+    .logo {
+      font-size: 7.5em;
+    }
+}
+
+/* ----------- Galaxy S4 ----------- */
+
+/* Portrait and Landscape */
+@media screen
+  and (device-width: 320px)
+  and (device-height: 640px)
+  and (-webkit-device-pixel-ratio: 3) {
+    .logo {
+      font-size: 7.5em;
+    }
+}
+
+/* Portrait */
+@media screen
+  and (device-width: 320px)
+  and (device-height: 640px)
+  and (-webkit-device-pixel-ratio: 3)
+  and (orientation: portrait) {
+    .logo {
+      font-size: 7.5em;
+    }
+}
+
+/* Landscape */
+@media screen
+  and (device-width: 320px)
+  and (device-height: 640px)
+  and (-webkit-device-pixel-ratio: 3)
+  and (orientation: landscape) {
+    .logo {
+      font-size: 7.5em;
+    }
+}
+
+/* ----------- Galaxy S5 ----------- */
+
+/* Portrait and Landscape */
+@media screen
+  and (device-width: 360px)
+  and (device-height: 640px)
+  and (-webkit-device-pixel-ratio: 3) {
+    .logo {
+      font-size: 7.5em;
+      margin: 207px auto;
+      position: relative;
+      left: 41px;
+    }
+}
+/* Portrait */
+@media screen
+  and (device-width: 360px)
+  and (device-height: 640px)
+  and (-webkit-device-pixel-ratio: 3)
+  and (orientation: portrait) {
+    .logo {
+      font-size: 7.5em;
+      margin: 207px auto;
+      position: relative;
+      left: 41px;
+    }
+}
+
+/* Landscape */
+@media screen
+  and (device-width: 360px)
+  and (device-height: 640px)
+  and (-webkit-device-pixel-ratio: 3)
+  and (orientation: landscape) {
+    .logo {
+      font-size: 7.5em;
+      margin: 207px auto;
+      position: relative;
+      left: 41px;
+    }
+}
