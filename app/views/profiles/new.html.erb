@@ -1,5 +1,39 @@
-<!-- <h1>New Profile</h1>
+<%= stylesheet_link_tag "profiles.css" %>
 
-<%= render 'form', profile: @profile %>
+<div class="questionbox">
+<div class="formformatstyle">
+  <h1 id="welcome">welcome</h1>
+  <p id="welcometxt">Let us know a little about you so we can start stirring the pot</p>
+  <%= form_for(@profile) do |f| %>
+    <% if @profile.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(profile.errors.count, "error") %> prohibited this profile from being saved:</h2>
 
-<%= link_to 'Back', profiles_path %> -->
+        <ul>
+        <% @profile.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field1">
+      <!-- <%= f.label :gender %> -->
+      <%= f.select :gender, ["I am a", "Female", "Male"] %>
+    </div>
+    <%= f.select :gender_pref, ["I am looking for","Female","Male"] %>
+
+    <div class="field3">
+      <!-- <%= f.label :age %> -->
+      <%= f.text_field :age, placeholder: "Age" %>
+    </div>
+
+    <%= f.hidden_field :user_id, :value => current_user.id%>
+
+    <div class="actions">
+      <%= f.submit placeholder: "Register" %>
+    </div>
+    <div
+  <% end %>
+</div>
+</div>

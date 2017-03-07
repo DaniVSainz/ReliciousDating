@@ -2,6 +2,75 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+//////////LANDING PAGE NEW.HTML/////////////
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.questionbox {
+  background-color: #B6D276;
+  height: 66vh;
+  width: 100vw;
+  margin:  auto;
+  padding: 0;
+}
+h1 {
+  margin: 50px;
+}
+
+#welcome {
+  padding: 30px;
+  font-size: 3.2em;
+}
+
+#welcometxt {
+  font-size: 25px;
+  margin: 50px;
+
+}
+@font-face {
+	font-family: 'Raleway';
+	src: font-url("raleway.woff");
+}
+
+.formformatstyle {
+  margin: 0 auto;
+  padding: 0;
+  font-family: 'Raleway';
+  text-align: center;
+// font-size: 2em;
+}
+
+// $color: #B6D276;
+
+#profile_gender {
+  // background-color: #B6D276;
+  width: 50vh;
+  height: 6vh;
+  font-size: 16px;
+  font-family: 'Raleway';
+}
+
+#profile_gender_pref {
+  width: 50vh;
+  height: 6vh;
+  font-size: 16px;
+  font-family: 'Raleway';
+}
+
+#profile_age {
+  width: 49vh;
+  height: 5.4vh;
+  border-radius: 6px;
+  font-size: 16px;
+  font-family: 'Raleway';
+  // font-weight: 600;
+}
+
 //////////////NAV BAR///////////////////////////
 
 #nav-trigger {

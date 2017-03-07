@@ -1,4 +1,4 @@
-<%= form_for(profile) do |f| %>
+<!-- <%= form_for(profile) do |f| %>
   <% if profile.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(profile.errors.count, "error") %> prohibited this profile from being saved:</h2>
@@ -26,14 +26,19 @@
     <%= f.text_field :age %>
   </div>
 
-  <!-- <div class="field">
+   <div class="field">
     <%= f.label :user_id %>
     <%= f.text_field :user_id %>
   </div> -->
-  <!-- <%= f.label :user_id %> -->
+  <!-- <%= f.label :user_id %>
   <%= f.hidden_field :user_id, :value => current_user.id%>
 
   <div class="actions">
     <%= f.submit %>
   </div>
-<% end %>
+<% end %> -->
+<!-- <h1>New Profile</h1>
+
+<%= render 'form', profile: @profile %>
+
+<%= link_to 'Back', profiles_path %> -->
