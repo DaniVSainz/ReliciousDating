@@ -9,12 +9,21 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
+  background-image: url('https://b.zmtcdn.com/data/pictures/2/6542/b27167e7690043767312a81a21bf34d2_featured_v2.jpg');
+  // background-position: center, bottom-right;
+  // background-repeat: no-repeat, no-repeat;
+  background-size: cover;
+  // box-shadow: inset 0px 0px 0 5000px rgba(0,0,0,0.5);
+  // position: relative;
+
 }
 
+
 .questionbox {
-  background-color: #B6D276;
+  background-color: #C2E999;
+  // background-color: #B6D276;
   height: 66vh;
-  width: 100vw;
+  width: 60vw;
   margin:  auto;
   padding: 0;
 }
@@ -70,6 +79,20 @@ h1 {
   font-family: 'Raleway';
   // font-weight: 600;
 }
+
+@font-face {
+	font-family: 'Isabella Script';
+	src: font-url("Isabella_Script.woff");
+}
+
+.lovequotes {
+// background-image: url('https://media.giphy.com/media/VXuaqdTMewwyA/source.gif');
+// background-position: bottom-right;
+// background-repeat: no-repeat;
+// height: 90px;
+// width:90px;
+}
+
 
 //////////////NAV BAR///////////////////////////
 
@@ -140,22 +163,24 @@ nav#nav-mobile {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    background-color: white; }
+    background-color: white;
+  }
   nav#nav-mobile li {
     display: block;
     padding: 5px 0;
     margin: 0 5px;
-    border-bottom: solid 1px white; }
+    border-bottom: solid 1px white;
+   }
     nav#nav-mobile li:last-child {
-      border-bottom: none; }
+      border-bottom: none;
+  }
   nav#nav-mobile a {
     text-decoration: none;
     display: block;
     color: #3C3530;
     padding: 10px 30px; }
-    nav#nav-mobile a:hover {
-      background-color: white;
-      color: #F16B6F; }
 
-/* =Media Queries
--------------------------------------------------------------- */
+    nav#nav-mobile a:hover
+     {
+      background-color: white;
+      color:#F16B6F;}
