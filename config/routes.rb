@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   get "mailbox/trash" => "mailbox#trash", as: :mailbox_trash
 
   resources :restaurant
-  get '/search' => 'restaurant#show'
+  # get '/search' => 'restaurant#show'
   resources :profile
   resources :conversations do
   member do
