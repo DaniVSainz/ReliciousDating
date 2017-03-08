@@ -6,6 +6,9 @@ class User < ApplicationRecord
 
   has_many :identities
   has_one :profile
+  has_many :matches
+  has_many :restaurants, through: :matches
+  has_many :users, through: :restaurants
   acts_as_messageable
 
   def mailboxer_name
