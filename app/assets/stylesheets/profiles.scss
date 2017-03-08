@@ -3,37 +3,79 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+
 //////////LANDING PAGE NEW.HTML/////////////
 body {
   height: 100%;
   width: 100%;
   margin: 0;
   padding: 0;
-  background-image: url('https://b.zmtcdn.com/data/pictures/2/6542/b27167e7690043767312a81a21bf34d2_featured_v2.jpg');
-  // background-position: center, bottom-right;
-  // background-repeat: no-repeat, no-repeat;
-  background-size: cover;
-  // box-shadow: inset 0px 0px 0 5000px rgba(0,0,0,0.5);
-  // position: relative;
-
 }
 
+.bg-img,
+.overlay:before {
+  background:
+   url('http://s3-us-west-1.amazonaws.com/prod-biut/wp-content/uploads/2015/12/23115654/helado5.jpg')
+   no-repeat fixed 0 0 / cover;
 
-.questionbox {
-  background-color: #C2E999;
-  // background-color: #B6D276;
-  height: 66vh;
-  width: 60vw;
-  margin:  auto;
-  padding: 0;
 }
+// https://cdn.shutterstock.com/shutterstock/videos/8891473/thumb/1.jpg
+
+.bg-img {
+  margin: 0 auto;
+  padding: 40px 20px 0 0;
+  height: 100vh;
+  width: 160vh;
+  // align-items: center;
+  // display: flex;
+  // justify-content: center;
+}
+
+.overlay {
+  height: 60vh;
+  margin: 0 auto;
+  width: 55vw;
+  overflow: hidden;
+  padding: 50px;
+  position: relative;
+  color: white;
+  font-family: 'Lato';
+  position: relative;
+  text-align: center;
+  z-index: 0;
+  &:before {
+    content: '';
+    filter: blur(20px);
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+  }
+}
+
+// .questionbox {
+//   background-color: #C2E999;
+//   // background-color: #B6D276;
+//   // height: 66vh;
+//   // width: 60vw;
+//   margin:  auto;
+//   padding: 0;
+// }
+
+.donut {
+  height: 100px;
+  padding: 20px;
+  width: 115px;
+}
+
 h1 {
   margin: 50px;
 }
 
 #welcome {
-  padding: 30px;
-  font-size: 3.2em;
+  font-size: 3.5em;
 }
 
 #welcometxt {

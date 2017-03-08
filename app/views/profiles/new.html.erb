@@ -1,6 +1,7 @@
 <%= stylesheet_link_tag "profiles.css" %>
 <div class="bg-img">
-<div class="questionbox">
+<!-- <div class="questionbox"> -->
+<div class="overlay">
 <div class="formformatstyle">
   <h1 id="welcome">welcome</h1>
   <p id="welcometxt">Let us know a little about you so we can start stirring the pot</p>
@@ -31,11 +32,12 @@
     <%= f.hidden_field :user_id, :value => current_user.id%>
 
     <div class="actions">
-      <%= f.submit placeholder: "Register" %>
+      <!-- <img src="https://media.giphy.com/media/VXuaqdTMewwyA/source.gif" alt="sushi" height="90px"> -->
+      <%= image_submit_tag "donut2.png", class: 'donut' %>
     </div>
     <div
   <% end %>
-  <img src="https://media.giphy.com/media/VXuaqdTMewwyA/source.gif" alt="sushi" height="90px">
+
   <div class="lovequotes">
     &nbsp;
   </div>
