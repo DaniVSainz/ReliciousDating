@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<!-- /restaurants -->
 <h1>Restaurants</h1>
 
 <table>
@@ -18,7 +18,7 @@
   <tbody>
     <% @restaurants.each do |restaurant| %>
       <tr>
-        <td><%= restaurant.name %></td>
+        <td ><%= restaurant.name %></td>
         <td><%= restaurant.restaurantId %></td>
         <td><%= restaurant.photoUrl %></td>
         <td><%= restaurant.menueUrl %></td>
@@ -31,7 +31,37 @@
     <% end %>
   </tbody>
 </table>
-
 <br>
+
+<!-- Dani-Foursquare-Api-Decontruct-Json -->
+<!-- Creates Divs with restaurants from Api request -->
+<div class="text-center" id="fuck-my-life">
+  <% var = 0 %>
+  <% @response.parsed_response['response']['groups'][0]['items'].each do |hash| %>
+  <div id="parsed-text">
+    <%= var += 1 %>
+    <% hash['venue']['id'] %>
+    <%= ven_name = hash['venue']['name'] %><br>
+    <%= hash['venue']['contact']['formattedPhone'] %><br>
+    <%= hash['venue']['location']['formattedAddress'].join %><br>
+    <% if hash['venue']['photos']['count'] != 0 %>
+    <% picture = hash['venue']['photos']['groups'][0]['items'][0]['prefix'] + "original" + hash['venue']['photos']['groups'][0]['items'][0]['suffix'] %>
+    <%= image_tag picture, width:"200",height: "auto" %><br>
+    <% else %>
+    <%= "Custome Query?" %>
+    <% end %>
+    <%= link_to "#{ven_name}" , hash['venue']['url'] , id: 'ghost-button'%>
+    <% if hash['venue']['menu'] != nil %>
+    <% if hash['venue']['menu']['mobileUrl'] != nil %>
+    <%=  link_to 'Menu' , hash['venue']['menu']['mobileUrl'], id: "ghost-button"%>
+    <% else %>
+    <%= hash['venue']['menu']['url'] %>
+    <% end %>
+    <% else %>
+    <%= "Check Website" %>
+    <% end %>
+  </div>
+  <% end %>
+
 
 <%= link_to 'New Restaurant', new_restaurant_path %>
