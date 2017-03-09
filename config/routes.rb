@@ -13,8 +13,6 @@ Rails.application.routes.draw do
   get "mailbox/sent" => "mailbox#sent", as: :mailbox_sent
   get "mailbox/trash" => "mailbox#trash", as: :mailbox_trash
   get "welcome/testfile" => "welcome#testfile"
-  resources :restaurant
-  # get '/search' => 'restaurant#show'
   resources :profile
   resources :conversations do
   member do

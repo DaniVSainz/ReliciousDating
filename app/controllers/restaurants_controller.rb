@@ -1,15 +1,23 @@
 class RestaurantsController < ApplicationController
-  before_action :set_restaurant, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
+  before_action :set_restaurant, only: [ :edit, :update, :destroy] #:show,
 
   # GET /restaurants
   # GET /restaurants.json
   def index
     @restaurants = Restaurant.all
+    @search = params[:term]
+    @clientid = ENV['CLIENT_ID']
+    @client_secret = ENV['CLIENT_SECRET']
+    @todays_date = 20170307
+    @userless_request = "https://api.foursquare.com/v2/venues/explore?client_id=#{@clientid}&client_secret=#{@client_secret}&ll=25.803076,-80.204268&v=#{@todays_date}&query=#{@search}&venuePhotos=1"
+    @response = HTTParty.get @userless_request
   end
 
   # GET /restaurants/1
   # GET /restaurants/1.json
   def show
+    @search = params[:term]
   end
 
   # GET /restaurants/new

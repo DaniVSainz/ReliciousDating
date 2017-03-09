@@ -4,14 +4,25 @@ git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
 end
+# Hiding our api keys with a .env file wtih dotenv-rails
+gem 'dotenv-rails'
+# Add descrip please anika thanks!!!! :)
 gem 'bourbon'
+#Hirb prettifies Database queries in Rails-c for us
 gem 'hirb'
+#Chosen-rails gives .select features
 gem 'chosen-rails'
+# Devise for user authentication and encryption/sign in / ip etc related features
 gem 'devise'
+# Allows models to communicate between each-other tracks messages between users and unread counter etc
 gem 'mailboxer'
+# Facebook authentication that works with devise
 gem 'omniauth-facebook'
+# Using it to create pdf's of our Entity relationship diagrams
 gem "rails-erd"
+#Normalizes our css to a blank slate
 gem 'normalize-rails'
+# Httpary to do Api requests and get .parsed response
 gem 'httparty'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.2'
