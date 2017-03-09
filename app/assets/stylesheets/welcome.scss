@@ -124,22 +124,74 @@ h4#myModalLabel {
 }
 
 div.modal-header {
-// background-image: url('https://s-media-cache-ak0.pinimg.com/736x/20/bc/56/20bc56a6d96fd7d46bea57b4b5b6744a.jpg');
+// background-image: url('');
 // background-size: cover;
-color: black;
-font-weight: bold;
-border: none;
+// background-color: #8FCD90;
+// color: white;
+// text-shadow: 10px rgba(7,203,201,.5);
+
 }
+
+div.modal-footer {
+  border: none;
+}
+
 
 .modal-body {
   font-family: 'Raleway';
   font-weight: bold;
-  font-size: 15px;
+  font-size: 20px;
+  // opacity: .5;
   color: black;
-  background-image: url('https://img1.etsystatic.com/127/1/9071156/il_340x270.891407893_lis8.jpg');
-  background-size: cover;
+  font-style: bold;
+  background-image: url('http://heartoflongmont.org/sites/default/files/u83/christmas-green-heart-concept-aleksandr-volkov.jpg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
+.fieldemail{
+  padding-top: 45px;
+}
+
+.fieldpw {
+
+}
+
+input[type="submit"] {
+  background: transparent;
+  // color: white;
+  // border-color: white;
+  background-color: #A5DE6D;
+  font-weight: bolder;
+  border-radius: 70px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.fieldrem {
+  float:left;
+  color: black;
+  background-color: white;
+  // font-size: 30px;
+  // padding: 20px;
+  position: relative;
+  // top: 45px;
+  left: 20px;
+  margin-top: 30px;
+  // margin-bottom: 20px;
+  // padding-bottom: 20px;
+  font-weight: 600;
+}
+
+#recoverpw {
+  float:right;
+  // position: relative;
+  // left: 90px;
+  text-decoration: none;
+  margin-top: 30px;
+
+}
 //MEDIA QUERIES//
 /* ----------- iPhone 4 and 4S ----------- */
 
