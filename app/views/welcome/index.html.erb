@@ -1,4 +1,10 @@
-<h1 class="logo">Relicious</h1>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<h1 class="reliciouslogotag">Relicious</h1>
 <!-- <%= video_tag "coffee
 .mp4", autoplay: :autoplay, loop: :loop, mute: :mute, class: "video/mp4" %> -->
 <!-- <%= video_tag "coffee.mp4", controls: false, autoplay: true, loop: true, muted: true %> -->
@@ -7,116 +13,17 @@
 <h1>where food meets love</h1>
 <div class="signupmainbox"><header role="banner">
 		<div id="cd-logo"></div>
-
-		<!-- <nav class="main-nav"> -->
-			<!-- <ul> -->
-				<!-- inser more links here -->
-				<!-- <li><a class="cd-signin" href="#0">Sign in</a></li>
-				<li><a class="cd-signup" href="#0">Sign up</a></li>
-			</ul> -->
-		<!-- </nav> -->
-	<!-- </header> -->
-
-	<div class="cd-user-modal"> <!-- this is the entire modal form, including the background -->
-		<div class="cd-user-modal-container"> <!-- this is the container wrapper -->
-			<ul class="cd-switcher">
-				<li><a href="#0">Sign in</a></li>
-				<li><a href="#0">New account</a></li>
-			</ul>
-
-			<div id="cd-login"> <!-- log in form -->
-				<form class="cd-form">
-					<p class="fieldset">
-						<label class="image-replace cd-email" for="signin-email">E-mail</label>
-						<input class="full-width has-padding has-border" id="signin-email" type="email" placeholder="E-mail">
-						<span class="cd-error-message">Error message here!</span>
-					</p>
-
-					<p class="fieldset">
-						<label class="image-replace cd-password" for="signin-password">Password</label>
-						<input class="full-width has-padding has-border" id="signin-password" type="text"  placeholder="Password">
-						<a href="#0" class="hide-password">Hide</a>
-						<span class="cd-error-message">Error message here!</span>
-					</p>
-
-					<p class="fieldset">
-						<input type="checkbox" id="remember-me" checked>
-						<label for="remember-me">Remember me</label>
-					</p>
-
-					<p class="fieldset">
-						<input class="full-width" type="submit" value="Login">
-					</p>
-				</form>
-
-				<p class="cd-form-bottom-message"><a href="#0">Forgot your password?</a></p>
-				<!-- <a href="#0" class="cd-close-form">Close</a> -->
-			</div> <!-- cd-login -->
-
-			<div id="cd-signup"> <!-- sign up form -->
-				<form class="cd-form">
-					<p class="fieldset">
-						<label class="image-replace cd-username" for="signup-username">Username</label>
-						<input class="full-width has-padding has-border" id="signup-username" type="text" placeholder="Username">
-						<span class="cd-error-message">Error message here!</span>
-					</p>
-
-					<p class="fieldset">
-						<label class="image-replace cd-email" for="signup-email">E-mail</label>
-						<input class="full-width has-padding has-border" id="signup-email" type="email" placeholder="E-mail">
-						<span class="cd-error-message">Error message here!</span>
-					</p>
-
-					<p class="fieldset">
-						<label class="image-replace cd-password" for="signup-password">Password</label>
-						<input class="full-width has-padding has-border" id="signup-password" type="text"  placeholder="Password">
-						<a href="#0" class="hide-password">Hide</a>
-						<span class="cd-error-message">Error message here!</span>
-					</p>
-
-					<p class="fieldset">
-						<input type="checkbox" id="accept-terms">
-						<label for="accept-terms">I agree to the <a href="#0">Terms</a></label>
-					</p>
-
-					<p class="fieldset">
-						<input class="full-width has-padding" type="submit" value="Create account">
-					</p>
-				</form>
-
-				<!-- <a href="#0" class="cd-close-form">Close</a> -->
-			</div> <!-- cd-signup -->
-
-			<div id="cd-reset-password"> <!-- reset password form -->
-				<p class="cd-form-message">Lost your password? Please enter your email address. You will receive a link to create a new password.</p>
-
-				<form class="cd-form">
-					<p class="fieldset">
-						<label class="image-replace cd-email" for="reset-email">E-mail</label>
-						<input class="full-width has-padding has-border" id="reset-email" type="email" placeholder="E-mail">
-						<span class="cd-error-message">Error message here!</span>
-					</p>
-
-					<p class="fieldset">
-						<input class="full-width has-padding" type="submit" value="Reset password">
-					</p>
-				</form>
-
-				<p class="cd-form-bottom-message"><a href="#0">Back to log-in</a></p>
-			</div> <!-- cd-reset-password -->
-			<a href="#0" class="cd-close-form">Close</a>
-		</div> <!-- cd-user-modal-container -->
-	</div> <!-- cd-user-modal -->
-  <!-- <%= link_to "Login", new_user_session_path ,id:"linkdecomainpage1",class: "hvr-float" %>
-  <%= link_to "Sign up", new_profile_path , id:"linkdecomainpage2", class: "hvr-float" %> -->
-
-  <nav class="main-nav">
-    <ul>
-
-      <li><%= link_to "Login", new_user_session_path ,id:"linkdecomainpage1",class: "hvr-float cd-signin" %></li>
-      <li><%= link_to "Sign up", new_profile_path , id:"linkdecomainpage2", class: "hvr-float cd-signup" %></li>
+      <!-- <li><%= link_to "Login", new_user_session_path ,id:"linkdecomainpage1",class: "hvr-float cd-signin" %></li>
+      <li> -->
+        <button type="button" class="hvr-float cd-signup unstylebutton" id='linkdecomainpage2' data-toggle="modal" data-target="#myModal">
+      Register
+    </button><button type="button" class="hvr-float cd-signup unstylebutton" id='linkdecomainpage2' data-toggle="modal" data-target="#myModal">Login</button></li>
     </ul>
+<%= render './devise/sessions/modallogin.html.erb' %>
+<%= render './devise/registrations/modal.html.erb' %>
+
   </nav>
+  <!-- id='linkdecomainpage2' -->
   <!-- <div id="fb-root"></div>
   <script>(function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
