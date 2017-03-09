@@ -1,20 +1,4 @@
 
-<%= mailer = (User.find("#{current_user.id}")).users %>
-<body id:"mine">
-  <h1>
-    <% user_list = [] %>
-    <% current_user.restaurants do |restaurant| %>
-      <% restaurant.users do |user| %>
-        <h1><%= user %></h1>
-        <% user_list << user %>
-      <% end %>
-    <% end %>
-    <% user_list.each do |user| %>
-      <h1><%= "#{user.email}" %></h1>
-    <% end %>
-  </h1>
-</body>
-
 
 <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav pull-right">
