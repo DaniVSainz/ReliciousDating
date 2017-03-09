@@ -1,0 +1,10 @@
+<!-- <%= link_to "Signout", destroy_user_session_path, method: :delete %> -->
+
+<%= link_to "Login", new_user_session_path ,id:"linkdecomainpage1",class: "hvr-float" %>
+<%= link_to "Sign up", new_profile_path , id:"linkdecomainpage2", class: "hvr-float" %>
+
+new_user_session_path
+
+// background-color: #8FCD90;
+// text-shadow: 10px rgba(7,203,201,.5);
+// background-color: rgba(7,203,201,.5);

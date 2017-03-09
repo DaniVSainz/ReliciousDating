@@ -1,13 +1,29 @@
-<h1 class="logo">Relicious</h1>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<h1 class="reliciouslogotag">Relicious</h1>
 <!-- <%= video_tag "coffee
 .mp4", autoplay: :autoplay, loop: :loop, mute: :mute, class: "video/mp4" %> -->
 <!-- <%= video_tag "coffee.mp4", controls: false, autoplay: true, loop: true, muted: true %> -->
 <div class="ParallaxVideo">
 <%= video_tag "coffee.mp4", controls: false, autoplay: true, loop: true %>
 <h1>where food meets love</h1>
-<div class="signupmainbox">
-  <%= link_to "Login", new_user_session_path ,id:"linkdecomainpage1",class: "hvr-float" %>
-  <%= link_to "Sign up", new_profile_path , id:"linkdecomainpage2", class: "hvr-float" %>
+<div class="signupmainbox"><header role="banner">
+		<div id="cd-logo"></div>
+      <!-- <li><%= link_to "Login", new_user_session_path ,id:"linkdecomainpage1",class: "hvr-float cd-signin" %></li>
+      <li> -->
+        <button type="button" class="hvr-float cd-signup unstylebutton" id='linkdecomainpage2' data-toggle="modal" data-target="#myModal">
+      Register
+    </button><button type="button" class="hvr-float cd-signup unstylebutton" id='linkdecomainpage2' data-toggle="modal" data-target="#myModal">Login</button></li>
+    </ul>
+<%= render './devise/sessions/modallogin.html.erb' %>
+<%= render './devise/registrations/modal_signup.html.erb' %>
+
+  </nav>
+  <!-- id='linkdecomainpage2' -->
   <!-- <div id="fb-root"></div>
   <script>(function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
@@ -23,3 +39,4 @@
   -->
   </div>
 </div>
+<!-- <%= link_to "Signout", destroy_user_session_path, method: :delete %> -->
