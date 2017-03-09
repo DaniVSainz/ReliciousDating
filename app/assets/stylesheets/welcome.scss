@@ -133,7 +133,9 @@ div.modal-header {
 }
 
 div.modal-footer {
-  border: none;
+  // border: none;
+  margin: 0;
+  background-color: white;
 }
 
 
@@ -144,10 +146,13 @@ div.modal-footer {
   // opacity: .5;
   color: black;
   font-style: bold;
-  background-image: url('http://heartoflongmont.org/sites/default/files/u83/christmas-green-heart-concept-aleksandr-volkov.jpg');
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
+  // position: relative;
+padding: 19px;
+  // background-image: url('http://heartoflongmont.org/sites/default/files/u83/christmas-green-heart-concept-aleksandr-volkov.jpg');
+  // background-size: contain;
+  // background-position: center;
+  // background-repeat: no-repeat;
+  background-color: #A5DE6D;
 }
 
 .fieldemail{
@@ -186,8 +191,8 @@ input[type="submit"] {
 
 #recoverpw {
   float:right;
-  // position: relative;
-  // left: 90px;
+  position: relative;
+  right: 20px;
   text-decoration: none;
   margin-top: 30px;
 
