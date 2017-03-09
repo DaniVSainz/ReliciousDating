@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   root 'welcome#index'
-  resources :restaurants
+  # resources :restaurants
+  
+  get "restaurants/" => "restaurants#index"
+  post "restaurants/" => "restaurants#index"
   resources :profiles
   devise_for :users, class_name: 'FormUser', :controllers => { omniauth_callbacks: 'omniauth_callbacks', registrations: 'registrations'}
   devise_scope :user do

@@ -1,42 +1,12 @@
-<p id="notice"><%= notice %></p>
-<!-- /restaurants -->
-<h1>Restaurants</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Restaurantid</th>
-      <th>Photourl</th>
-      <th>Menueurl</th>
-      <th>Location</th>
-      <th>Website</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @restaurants.each do |restaurant| %>
-      <tr>
-        <td ><%= restaurant.name %></td>
-        <td><%= restaurant.restaurantId %></td>
-        <td><%= restaurant.photoUrl %></td>
-        <td><%= restaurant.menueUrl %></td>
-        <td><%= restaurant.location %></td>
-        <td><%= restaurant.website %></td>
-        <td><%= link_to 'Show', restaurant %></td>
-        <td><%= link_to 'Edit', edit_restaurant_path(restaurant) %></td>
-        <td><%= link_to 'Destroy', restaurant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-<br>
-<%= link_to 'New Restaurant', new_restaurant_path %>
-<%= form_tag "/restaurants" do %>
+<div class="restaurant-header">
+  <h1>Find Your Favorite Restaurants!!</h1>
+  <%= form_tag "/restaurants" do %>
   <%= search_field_tag :term %>
   <%= submit_tag "Go!" %>
-<% end %>
+  <% end %>
+</div>
 
 <!-- Dani-Foursquare-Api-Decontruct-Json -->
 <!-- Creates Divs with restaurants from Api request -->
