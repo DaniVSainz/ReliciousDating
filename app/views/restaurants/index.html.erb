@@ -32,13 +32,18 @@
   </tbody>
 </table>
 <br>
+<%= link_to 'New Restaurant', new_restaurant_path %>
+<%= form_tag "/restaurants" do %>
+  <%= search_field_tag :term %>
+  <%= submit_tag "Go!" %>
+<% end %>
 
 <!-- Dani-Foursquare-Api-Decontruct-Json -->
 <!-- Creates Divs with restaurants from Api request -->
-<div class="text-center" id="fuck-my-life">
+<div class="text-center" id="main-rest-div">
   <% var = 0 %>
   <% @response.parsed_response['response']['groups'][0]['items'].each do |hash| %>
-  <div id="parsed-text">
+  <div id="restaurant-div">
     <%= var += 1 %>
     <% hash['venue']['id'] %>
     <%= ven_name = hash['venue']['name'] %><br>
@@ -62,6 +67,3 @@
     <% end %>
   </div>
   <% end %>
-
-
-<%= link_to 'New Restaurant', new_restaurant_path %>
