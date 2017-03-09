@@ -105,9 +105,40 @@ h1.reliciouslogotag {
   font-size:1.5em;
   padding-left: 10px;
   font-weight: bold;
+
 }
 
+#linkdecomainpage2:hover{
+  text-decoration: none;
+}
 
+#linkdecomainpage:visited{
+  text-decoration: none;
+}
+
+h4#myModalLabel {
+  font-family: 'Raleway';
+  font-weight: bold;
+  font-size: 30px;
+  margin: 0;
+}
+
+div.modal-header {
+// background-image: url('https://s-media-cache-ak0.pinimg.com/736x/20/bc/56/20bc56a6d96fd7d46bea57b4b5b6744a.jpg');
+// background-size: cover;
+color: black;
+font-weight: bold;
+border: none;
+}
+
+.modal-body {
+  font-family: 'Raleway';
+  font-weight: bold;
+  font-size: 15px;
+  color: black;
+  background-image: url('https://img1.etsystatic.com/127/1/9071156/il_340x270.891407893_lis8.jpg');
+  background-size: cover;
+}
 
 //MEDIA QUERIES//
 /* ----------- iPhone 4 and 4S ----------- */
