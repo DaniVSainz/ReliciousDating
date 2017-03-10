@@ -10,7 +10,7 @@ gem 'dotenv-rails'
 gem 'bourbon'
 #Hirb prettifies Database queries in Rails-c for us
 gem 'hirb'
-#Chosen-rails gives .select features
+#Chosen-rails gives .select features might remove was used in compose section of mailbox
 gem 'chosen-rails'
 # Devise for user authentication and encryption/sign in / ip etc related features
 gem 'devise'
