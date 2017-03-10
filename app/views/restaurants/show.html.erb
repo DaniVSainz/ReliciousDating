@@ -1,0 +1,80 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<!-- NAVBAR  -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <%= link_to "Messenger", root_path, class: "navbar-brand" %>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav pull-right">
+        <% if user_signed_in? %>
+            <li><%= link_to "Hello, #{current_user.name}", "#" %></li>
+            <li><%= link_to "Inbox", mailbox_inbox_path %></li>
+            <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+        <% else %>
+            <li class="active"><%= link_to "Login", new_user_session_path %></li>
+            <li><%= link_to "Sign up", new_user_registration_path %></li>
+        <% end %>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
+<br>
+<br>
+<br>
+<div class="text-center">
+  <h1>Find Your Favorite Restaurants!!</h1>
+  <%= form_tag "/restaurants" do %>
+  <%= search_field_tag :term %>
+  <%= submit_tag "Go!" %>
+  <% end %>
+</div>
+
+<!-- Foursquare-Api-Decontruct-Json -->
+<!-- Creates Divs with restaurants from Api request -->
+<div id="main-rest-div">
+  <% var = 0 %>
+  <% @response.parsed_response['response']['groups'][0]['items'].each do |hash| %>
+  <div id="restaurant-div">
+    <%= var += 1 %>
+    <% hash['venue']['id'] %>
+    <%= ven_name = hash['venue']['name'] %><br>
+    <%= hash['venue']['contact']['formattedPhone'] %><br>
+    <%= hash['venue']['location']['formattedAddress'].join %><br>
+    <% if hash['venue']['photos']['count'] != 0 %>
+    <% picture = hash['venue']['photos']['groups'][0]['items'][0]['prefix'] + "original" + hash['venue']['photos']['groups'][0]['items'][0]['suffix'] %>
+    <%= image_tag picture, width:"200",height: "auto" %><br>
+    <% else %>
+    <%= "Custome Query?" %>
+    <% end %>
+    <%= link_to "#{ven_name}" , hash['venue']['url'] , id: 'ghost-button'%>
+    <% if hash['venue']['menu'] != nil %>
+      <% if hash['venue']['menu']['mobileUrl'] != nil %>
+        <%=  link_to 'Menu' , hash['venue']['menu']['mobileUrl'], id: "ghost-button"%>
+      <% else %>
+        <%= hash['venue']['menu']['url'] %>
+      <% end %>
+    <% else %>
+      <%= "Check Website" %>
+    <% end %>
+    <%= form_for @restaurant, :url => "/restaurants" |f| %>
+      <%= f.hidden_field :name, value: hash['venue']['name'] %>
+      <%= f.hidden_field :location, value: hash['venue']['location']['formattedAddress'].join %>
+      <%= f.hidden_field :menu_url, value: (hash['venue']['menu'] ? (hash['venue']['menu']['mobileUrl'] or hash['venue']['menu']['url']) : nil) %>
+      <%= f.hidden_field :photo_url, value: picture %>
+      <%= f.hidden_field :restaurantId, value: hash['venue']['id'] %>
+      <%= f.hidden_field :website, value: hash['venue']['url'] %>
+      <%= f.submit "Like", data: { confirm: 'Your confirm message' } ,id: 'ghost-button' %>
+    <% end %>
+  </div>
+  <% end %>

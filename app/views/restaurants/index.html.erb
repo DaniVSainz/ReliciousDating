@@ -34,7 +34,7 @@
 <br>
 <div class="text-center">
   <h1>Find Your Favorite Restaurants!!</h1>
-  <%= form_tag "/restaurants/search", method: :get do %>
+  <%= form_tag "/restaurants" do %>
   <%= search_field_tag :term %>
   <%= submit_tag "Go!" %>
   <% end %>
@@ -67,14 +67,14 @@
     <% else %>
       <%= "Check Website" %>
     <% end %>
-    <%= form_for @restaurant do |f| %>
+    <%= form_for @restaurant (url: "/restaurants") do |f| %>
       <%= f.hidden_field :name, value: hash['venue']['name'] %>
       <%= f.hidden_field :location, value: hash['venue']['location']['formattedAddress'].join %>
       <%= f.hidden_field :menu_url, value: (hash['venue']['menu'] ? (hash['venue']['menu']['mobileUrl'] or hash['venue']['menu']['url']) : nil) %>
       <%= f.hidden_field :photo_url, value: picture %>
       <%= f.hidden_field :restaurantId, value: hash['venue']['id'] %>
       <%= f.hidden_field :website, value: hash['venue']['url'] %>
-      <%= f.submit "Like", id: 'ghost-button' %>
+      <%= f.submit "Like", data: { confirm: 'Your confirm message' } ,id: 'ghost-button' %>
     <% end %>
   </div>
   <% end %>

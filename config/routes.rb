@@ -2,10 +2,12 @@ Rails.application.routes.draw do
   root 'welcome#index'
   get "welcome/testfile" => "welcome#testfile"
   resources :restaurants
+  
 
 
   # get "restaurants/" => "restaurants#index"
   # post "restaurants/" => "restaurants#index"
+  # post "/restaurants/create" => "restaurants#create"
   # get "/restaurants/new" => "restaurants#new"
   # post "welcome/restaurants/create" => "restaurants#create"
 
