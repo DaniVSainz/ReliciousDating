@@ -34,7 +34,7 @@
 <br>
 <div class="text-center">
   <h1>Find Your Favorite Restaurants!!</h1>
-  <%= form_tag "/restaurants" do %>
+  <%= form_tag "/restaurants/show" do %>
   <%= search_field_tag :term %>
   <%= submit_tag "Go!" %>
   <% end %>
@@ -67,7 +67,7 @@
     <% else %>
       <%= "Check Website" %>
     <% end %>
-    <%= form_for @restaurant, :url => "/restaurants" |f| %>
+    <%= form_for @restaurant do |f| %>
       <%= f.hidden_field :name, value: hash['venue']['name'] %>
       <%= f.hidden_field :location, value: hash['venue']['location']['formattedAddress'].join %>
       <%= f.hidden_field :menu_url, value: (hash['venue']['menu'] ? (hash['venue']['menu']['mobileUrl'] or hash['venue']['menu']['url']) : nil) %>

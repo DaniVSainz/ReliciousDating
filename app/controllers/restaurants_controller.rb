@@ -15,8 +15,10 @@ class RestaurantsController < ApplicationController
 
     @restaurant = Restaurant.new
   end
-  
-  def search
+
+  # GET /restaurants/1
+  # GET /restaurants/1.json
+  def show
     @restaurants = Restaurant.all
     @search = params[:term]
     @clientid = ENV['CLIENT_ID']
@@ -25,11 +27,6 @@ class RestaurantsController < ApplicationController
     @userless_request = "https://api.foursquare.com/v2/venues/explore?client_id=#{@clientid}&client_secret=#{@client_secret}&ll=25.803076,-80.204268&v=#{@todays_date}&query=#{@search}&venuePhotos=1"
     @response = HTTParty.get @userless_request
     @restaurant = Restaurant.new
-  end
-  # GET /restaurants/1
-  # GET /restaurants/1.json
-  def show
-    @search = params[:term]
   end
 
   # GET /restaurants/new
