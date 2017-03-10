@@ -33,15 +33,15 @@
 <br>
 <br>
 <div class="text-center">
-  <h1>Find Your Favorite Restaurants!!</h1>
-  <%= form_tag "/restaurants/search", method: :get do %>
-  <%= search_field_tag :term %>
-  <%= submit_tag "Go!" %>
-  <% end %>
+    <h1>Find Your Favorite Restaurants!!</h1>
+     <%= form_tag "/restaurants" do %>
+      <%= search_field_tag :term %>
+      <%= submit_tag "Go!" %>
+    <% end %>
 </div>
 
-<!-- Foursquare-Api-Decontruct-Json -->
-<!-- Creates Divs with restaurants from Api request -->
+
+
 <div id="main-rest-div">
   <% var = 0 %>
   <% @response.parsed_response['response']['groups'][0]['items'].each do |hash| %>

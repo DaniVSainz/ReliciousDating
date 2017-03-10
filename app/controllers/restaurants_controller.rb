@@ -34,6 +34,7 @@ class RestaurantsController < ApplicationController
   # POST /restaurants
   # POST /restaurants.json
   def create
+    # if Restaurant.find_by :restaurantId params[:restaurantId] != nil
     @restaurant = Restaurant.find_or_initialize_by(restaurant_params)
 
     respond_to do |format|

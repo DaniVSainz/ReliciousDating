@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
   root 'welcome#index'
-  resources :restaurants do
-    # get 'like', on: :member
-  end
+  get "welcome/testfile" => "welcome#testfile"
+  resources :restaurants
 
 
   # get "restaurants/" => "restaurants#index"
@@ -21,7 +20,7 @@ Rails.application.routes.draw do
   get "mailbox/inbox" => "mailbox#inbox", as: :mailbox_inbox
   get "mailbox/sent" => "mailbox#sent", as: :mailbox_sent
   get "mailbox/trash" => "mailbox#trash", as: :mailbox_trash
-  get "welcome/testfile" => "welcome#testfile"
+
   resources :profile
   resources :conversations do
   member do
