@@ -1,24 +1,25 @@
 <p id="notice"><%= notice %></p>
+<nav></nav>
+<div class="profilebackground">
 
-<p>
-  <strong>Gender:</strong>
-  <%= @profile.gender %>
-</p>
+</div>
+<div class="profilepic">
+<a href="#">Add Picture</a>
+<a href="#">Change Picture</a>
 
-<p>
-  <strong>Gender pref:</strong>
-  <%= @profile.gender_pref %>
-</p>
+</div>
+<div class="profilemainbody">
+  <div class="profilemainnavbar">
 
-<p>
-  <strong>Age:</strong>
-  <%= @profile.age %>
-</p>
+  </div>
+  <div class="profilemaininfo">
+    <h1>Profile Info Header</h1>
+    <p>Bio</p>
+    <p>User Info
+    <% render './profileshow.html.erb' %></p>
+    <div class="profileshowmatches">
 
-<p>
-  <strong>User:</strong>
-  <%= @profile.user %>
-</p>
 
-<%= link_to 'Edit', edit_profile_path(@profile) %> |
-<%= link_to 'Back', profiles_path %>
+    </div>
+  </div>
+</div>

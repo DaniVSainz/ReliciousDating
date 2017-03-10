@@ -1,47 +1,65 @@
 <p id="notice"><%= notice %></p>
-<nav id="nav-main">
-<ul>
-<li><%= link_to "Home" %></li>
-<li><%= link_to "Messages"%></li>
-<li><%= link_to "Search"%></li>
-<li><%= link_to "Log Out"%></li>
-</ul>
+
+<link href="https://fonts.googleapis.com/css?family=League+Script" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Parisienne" rel="stylesheet">
+
+<nav class="fixed-nav-bar">
+  <span class="navbarlogo">Relicious</span>
+  <ul>
+  <li><%= link_to "Home" %></li>
+  <li><%= link_to "Messages"%></li>
+  <li><%= link_to "Search"%></li>
+  <li><%= link_to "Log Out"%></li>
+  </ul>
 </nav>
-<div id="nav-trigger">
-<span>Menu</span>
+
 </div>
-<nav id="nav-mobile"></nav>
+<div class="profilebackground">
+
+    <p id="lovequoteprofile"> "Food is symbolic of love when words are inadequate." —A lan D. Wolfelt</p>
+
 </div>
+<div class="profilepic">
+<a href="#">Add Picture</a>
+<a href="#">Change Picture</a>
+
+</div>
+<div class="profilemainbody">
+  <div class="profilemainnavbar">
+
+  </div>
+  <div class="profilemaininfo">
+    <div class="wrapper">
+  <div class="wrapper-inner">
+    <div class="box-wrapper">
+      <div class="box">
+        <div class="avatar">
+          <img src="http://remtsoy.com/experiments/user_card/img/avatar.jpg">
+        </div>
+        <div class="box-inner">
+          <h3 class="name">Christina W. Turner</h3>
+          <h4 class="occupation">interaction designer</h4>
+          <p class="location"><i class="fa fa-map-marker"></i>Austin, Texas</p>
+          <h3 class="followers-title">2.5k+ followers</h3>
+        </div>
+        <ul class="social-list">
+          <li><a href="#" class="fa fa-facebook">Home</a></li>
+          <li><a href="#" class="fa fa-dribbble">Add Photo</a></li>
+          <li><a href="#" class="fa fa-twitter">Edit Photo</a></li>
+          <li><a href="#" class="fa fa-pinterest">Edit Bio</a></li>
+          <li><a href="#" class="fa fa-linkedin">See Profile</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+    <!-- <h1>Profile Info Header</h1>
+    <p>Bio</p>
+    <p>User Info
+    </p> -->
+    <div class="profileshowmatches">
 
 
-<h1>Profiles</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Gender</th>
-      <th>Gender pref</th>
-      <th>Age</th>
-      <th>User</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @profiles.each do |profile| %>
-      <tr>
-        <td><%= profile.gender %></td>
-        <td><%= profile.gender_pref %></td>
-        <td><%= profile.age %></td>
-        <td><%= profile.user %></td>
-        <td><%= link_to 'Show', profile %></td>
-        <td><%= link_to 'Edit', edit_profile_path(profile) %></td>
-        <td><%= link_to 'Destroy', profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Profile', new_profile_path %>
+    </div>
+  </div>
+</div>
