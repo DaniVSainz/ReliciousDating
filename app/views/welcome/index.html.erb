@@ -11,16 +11,51 @@
 <div class="ParallaxVideo">
 <%= video_tag "coffee.mp4", controls: false, autoplay: true, loop: true %>
 <h1>where food meets love</h1>
-<div class="signupmainbox"><header role="banner">
+<div class="signupmainbox">
 		<div id="cd-logo"></div>
-      <!-- <li><%= link_to "Login", new_user_session_path ,id:"linkdecomainpage1",class: "hvr-float cd-signin" %></li>
-      <li> -->
-        <button type="button" class="hvr-float cd-signup unstylebutton" id='linkdecomainpage2' data-toggle="modal" data-target="#myModal">
-      Register
-    </button><button type="button" class="hvr-float cd-signup unstylebutton" id='linkdecomainpage2' data-toggle="modal" data-target="#myModal">Login</button></li>
-    </ul>
-<%= render './devise/sessions/modallogin.html.erb' %>
-<%= render './devise/registrations/modal_signup.html.erb' %>
+    <!-- lOG IN Modal button -->
+    <button type="button" class="hvr-float cd-signup unstylebutton" id='linkdecomainpage2' data-toggle="modal" data-target="#modal-transparent">
+  Log In
+</button>
+<button type="button" class="hvr-float cd-signup unstylebutton" id='linkdecomainpage1' data-toggle="modal" data-target="#modal-transparent_register">
+Register
+</button>
+    <!-- Modal -->
+    <div class="modal modal-transparent fade" id="modal-transparent" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel">Hi there, good to see you</h4>
+      </div>
+      <div class="modal-body">
+          <%= render './devise/sessions/newlogin.html.erb' %>
+      </div>
+      <div class="modal-footer">
+
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!-- REGISTER MODAL -->
+
+<!-- Modal -->
+<div class="modal modal-transparent_register fade" id="modal-transparent_register" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+  <div class="modal-header">
+    <h4 class="modal-title" id="myModalLabel">Here begins your path to happily ever after</h4>
+  </div>
+  <div class="modal-body">
+    <%= render './devise/registrations/new.html.erb' %>
+  </div>
+  <div class="modal-footer">
+
+  </div>
+</div>
+</div>
+</div>
+
 
   </nav>
   <!-- id='linkdecomainpage2' -->

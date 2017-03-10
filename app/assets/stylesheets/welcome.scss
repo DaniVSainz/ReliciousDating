@@ -116,6 +116,9 @@ h1.reliciouslogotag {
   text-decoration: none;
 }
 
+
+///// Login CSS/////
+
 h4#myModalLabel {
   font-family: 'Raleway';
   font-weight: bold;
@@ -124,8 +127,8 @@ h4#myModalLabel {
 }
 
 div.modal-header {
-// background-image: url('');
-// background-size: cover;
+	border: none;
+	background-color: rgba(165,222,109,.6);
 // background-color: #8FCD90;
 // color: white;
 // text-shadow: 10px rgba(7,203,201,.5);
@@ -133,62 +136,74 @@ div.modal-header {
 }
 
 div.modal-footer {
-  // border: none;
-  margin: 0;
-  background-color: white;
+  border: none;
+	font-weight: lighter;
+}
+
+.modal-transparent {
+  background: transparent;
+	background-image: url('bigheartgreen.png');
+	background-size: contain;
+	// background-size: 50%;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.modal-transparent .modal-content {
+  background: transparent;
+	color: white;
+}
+.modal-backdrop.modal-backdrop-transparent {
+  background: black;
+}
+.modal-backdrop.modal-backdrop-transparent.in {
+  opacity: .6;
+  filter: alpha(opacity=60);
 }
 
 
 .modal-body {
-  font-family: 'Raleway';
-  font-weight: bold;
+  font-family: 'Arial';
   font-size: 20px;
-  // opacity: .5;
   color: black;
-  font-style: bold;
-  // position: relative;
-padding: 19px;
-  // background-image: url('http://heartoflongmont.org/sites/default/files/u83/christmas-green-heart-concept-aleksandr-volkov.jpg');
-  // background-size: contain;
-  // background-position: center;
-  // background-repeat: no-repeat;
-  background-color: #A5DE6D;
+	background-color: rgba(165,222,109,.6);
+  // background-color: #A5DE6D;
 }
 
-.fieldemail{
-  padding-top: 45px;
+input#user_email {
+
+	color: black;
+	font-size: 15px;
+	font-weight: lighter;
 }
 
-.fieldpw {
-
+input#user_password {
+	color: black;
+	font-size: 15px;
+	font-weight: lighter;
 }
 
 input[type="submit"] {
   background: transparent;
-  // color: white;
-  // border-color: white;
+  color: white;
+  border-color: white;
   background-color: #A5DE6D;
-  font-weight: bolder;
-  border-radius: 70px;
-  margin-top: 20px;
-  margin-bottom: 30px;
+  font-weight: lighter;
+	font-size: 15px;
 }
+
 input[type="submit"]:hover {
+
   background-color: #8FCD90;
 }
+
 .fieldrem {
   float:left;
-  color: black;
-  background-color: white;
-  // font-size: 30px;
-  // padding: 20px;
+  color: white;
   position: relative;
-  // top: 45px;
   left: 20px;
   margin-top: 30px;
-  // margin-bottom: 20px;
-  // padding-bottom: 20px;
-  font-weight: 600;
+  font-weight: lighter;
 }
 
 #recoverpw {
@@ -199,6 +214,84 @@ input[type="submit"]:hover {
   margin-top: 30px;
 
 }
+
+
+///// Register CSS//////
+
+.modal-transparent_register {
+  background: transparent;
+	background-image: url('bigheartgreen.png');
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.modal-transparent_register .modal-body {
+	background: transparent;
+  font-family: 'Arial';
+  font-size: 20px;
+  color: black;
+	background-color: rgba(165,222,109,.6);
+  // background-color: #A5DE6D;
+}
+
+.modal-transparent_register .modal-content {
+  background: transparent;
+	color: white;
+}
+.modal-backdrop.modal-backdrop-transparent_register {
+  background: black;
+}
+
+.form-group1name {
+	color: black;
+	font-size: 15px;
+	font-weight: lighter;
+}
+
+.field2pw1 {
+	color: black;
+	font-size: 15px;
+	font-weight: lighter;
+}
+
+.field3pwconf {
+	color: black;
+	font-size: 15px;
+	font-weight: lighter;
+}
+
+.fieldreg1email {
+	color: black;
+	font-size: 15px;
+	font-weight: lighter;
+}
+
+.actions1signup {
+	color: black;
+	font-size: 15px;
+	font-weight: lighter;
+}
+
+input.btn.btn-primary {
+	background: transparent;
+	color: white;
+	border-color: white;
+	background-color: #A5DE6D;
+	font-weight: lighter;
+	font-size: 15px;
+}
+
+input.btn.btn-primary:hover {
+
+  background-color: #8FCD90;
+}
+
+.modal-transparent_register .modal-footer {
+	border: none;
+	background-color: rgba(165,222,109,.6);
+}
+
 //MEDIA QUERIES//
 /* ----------- iPhone 4 and 4S ----------- */
 
