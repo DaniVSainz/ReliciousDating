@@ -12,6 +12,8 @@ class RestaurantsController < ApplicationController
     @todays_date = 20170307
     @userless_request = "https://api.foursquare.com/v2/venues/explore?client_id=#{@clientid}&client_secret=#{@client_secret}&ll=25.803076,-80.204268&v=#{@todays_date}&query=#{@search}&venuePhotos=1"
     @response = HTTParty.get @userless_request
+
+    @restaurant = Restaurant.new
   end
 
   # GET /restaurants/1
@@ -32,11 +34,12 @@ class RestaurantsController < ApplicationController
   # POST /restaurants
   # POST /restaurants.json
   def create
-    @restaurant = Restaurant.new(restaurant_params)
+    @restaurant = Restaurant.find_or_initialize_by(restaurant_params)
 
     respond_to do |format|
       if @restaurant.save
-        format.html { redirect_to @restaurant, notice: 'Restaurant was successfully created.' }
+        Match.create!(user: current_user, restaurant: @restaurant)
+        format.html {redirect_to @restaurant, notice: 'Restaurant was successfully created.' }
         format.json { render :show, status: :created, location: @restaurant }
       else
         format.html { render :new }

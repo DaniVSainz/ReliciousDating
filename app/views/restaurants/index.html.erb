@@ -1,6 +1,9 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<!-- NAVBAR  -->
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
@@ -31,7 +34,7 @@
 <br>
 <div class="text-center">
   <h1>Find Your Favorite Restaurants!!</h1>
-  <%= form_tag "/restaurants" do %>
+  <%= form_tag "/restaurants", method: :getf do %>
   <%= search_field_tag :term %>
   <%= submit_tag "Go!" %>
   <% end %>
@@ -56,13 +59,22 @@
     <% end %>
     <%= link_to "#{ven_name}" , hash['venue']['url'] , id: 'ghost-button'%>
     <% if hash['venue']['menu'] != nil %>
-    <% if hash['venue']['menu']['mobileUrl'] != nil %>
-    <%=  link_to 'Menu' , hash['venue']['menu']['mobileUrl'], id: "ghost-button"%>
+      <% if hash['venue']['menu']['mobileUrl'] != nil %>
+        <%=  link_to 'Menu' , hash['venue']['menu']['mobileUrl'], id: "ghost-button"%>
+      <% else %>
+        <%= hash['venue']['menu']['url'] %>
+      <% end %>
     <% else %>
-    <%= hash['venue']['menu']['url'] %>
+      <%= "Check Website" %>
     <% end %>
-    <% else %>
-    <%= "Check Website" %>
+    <%= form_for @restaurant do |f| %>
+      <%= f.hidden_field :name, value: hash['venue']['name'] %>
+      <%= f.hidden_field :location, value: hash['venue']['location']['formattedAddress'].join %>
+      <%= f.hidden_field :menu_url, value: (hash['venue']['menu'] ? (hash['venue']['menu']['mobileUrl'] or hash['venue']['menu']['url']) : nil) %>
+      <%= f.hidden_field :photo_url, value: picture %>
+      <%= f.hidden_field :restaurantId, value: hash['venue']['id'] %>
+      <%= f.hidden_field :website, value: hash['venue']['url'] %>
+      <%= f.submit "Like", id: 'ghost-button' %>
     <% end %>
   </div>
   <% end %>
