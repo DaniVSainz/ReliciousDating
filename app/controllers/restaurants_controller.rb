@@ -34,18 +34,27 @@ class RestaurantsController < ApplicationController
   # POST /restaurants
   # POST /restaurants.json
   def create
-    # if Restaurant.find_by :restaurantId params[:restaurantId] != nil
-    @restaurant = Restaurant.find_or_initialize_by(restaurant_params)
-
-    respond_to do |format|
-      if @restaurant.save
-        Match.create!(user: current_user, restaurant: @restaurant)
-        format.html {redirect_to @restaurant, notice: 'Restaurant was successfully created.' }
-        format.json { render :show, status: :created, location: @restaurant }
-      else
-        format.html { render :new }
-        format.json { render json: @restaurant.errors, status: :unprocessable_entity }
-      end
+  #   # @restaurant = Restaurant.find_or_initialize_by(restaurant_params)
+    restaurant_match = Restaurant.find_by(restaurant_params)#(restaurantId: restaurant_params[:restaurantId])
+    @restaurant = Restaurant.new(restaurant_params)
+    # raise RuntimeError.new "restaurant match is nil" if restaurant_match.nil?
+    conditions = !restaurant_match.nil? && current_user.restaurants.find_by(restaurant_params).nil?#(restaurantId: restaurant_params[:restaurantId]).nil?
+    if conditions
+      Match.create(user: current_user, restaurant: restaurant_match) #@restaurant
+    elsif restaurant_match.nil?
+      # @restaurant = Restaurant.new(restaurant_params)
+      @restaurant.save
+      Match.create(user: current_user, restaurant: @restaurant)
+  #     respond_to do |format|
+  #       if @restaurant.save
+  #         Match.create!(user: current_user, restaurant: @restaurant)
+  #         format.html {redirect_to @restaurant, notice: 'Restaurant was successfully created.' }
+  #         format.json { render :show, status: :created, location: @restaurant }
+  #       else
+  #         format.html { render :new }
+  #         format.json { render json: @restaurant.errors, status: :unprocessable_entity }
+  #       end
+  #     end
     end
   end
 
