@@ -8,3 +8,17 @@ new_user_session_path
 // background-color: #8FCD90;
 // text-shadow: 10px rgba(7,203,201,.5);
 // background-color: rgba(7,203,201,.5);
+
+
+config-environements-production- config.cache_store = :memory_store <- <% cache do %>code to cache <%end%> <-can only use on parts of your page that don't change
+
+
+    <!-- <div class="modal modal-transparent fade" id="modal-transparent" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="hvr-float cd-signup unstylebutton" id='linkdecomainpage2' data-toggle="modal" data-target="#myModal">
+      Register
+    </button><button type="button" class="hvr-float cd-signup unstylebutton" id='linkdecomainpage2' data-toggle="modal" data-target="#myModal">Login</button> -->
+
+<!-- <%= render './devise/sessions/modallogin.html.erb' %> -->
+<!-- <%= render './devise/registrations/modal_signup.html.erb' %> -->
