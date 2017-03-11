@@ -138,11 +138,12 @@ body {
 }
 
 .profilebackground {
-  // background-image: url('http://youglo.co.uk/wp-content/uploads/2015/07/loveplate.jpg');
-  // background-size: contain;
-  // background-repeat: no-repeat;
+  // background-image: url('http://covermyfb.com/media/covers/kFMasYcBvOeazj3B.jpg');
+	background-image: url('./LOVEwatermelon.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
   background-color: #D6FFA7;
-  height: 65vh;
+  height: 70vh;
   width: 100%;
   padding: 0;
   margin: 0 auto;
@@ -382,10 +383,10 @@ h5 {
 }
 .social-list > li > a {
   display: block;
-  width: 45px;
+  width: 120px;
   height: 55px;
   line-height: 55px;
-  font-size: 28px;
+  font-size: 20px;
   text-decoration: none;
   color: #b3b3b3;
   border-right: 1px solid #ededed;
@@ -430,7 +431,7 @@ h5 {
 .navbarlogo {
   font-family: 'Isabella Script';
   color: white;
-  font-size: 71px;
+  font-size: 61px;
   padding: 24px 10px 15px;
 
 }

@@ -180,3 +180,709 @@ config-environements-production- config.cache_store = :memory_store <- <% cache 
         background-color: white;
         color:#F16B6F;
       }
+
+      <div class="container">
+        <div class="container_ui">
+          <div class="container_ui__heading">
+            <div class="header_icon">
+            </div>
+            <h1>
+              inbox
+            </h1>
+            <div class="menu_icon">
+              <div class="div"></div>
+              <div class="div"></div>
+              <div class="div"></div>
+            </div>
+          </div>
+          <input id="message-1" type="checkbox"></input>
+          <label for="message-1" href="#move">
+            <div class="container_ui__item">
+              <div class="face">
+                <img src="https://s3.amazonaws.com/uifaces/faces/twitter/rem/128.jpg"/>
+                <div class="color_bar one">
+                  <p>Now Reading</p>
+                  <span>Read</span>
+                </div>
+              </div>
+              <h2>
+                aspca
+              </h2>
+              <div class="dot active"></div>
+              <h3>subj: thanks, you are amazing</h3>
+              <h4>Your generous donation saved 3 million puppies...</h4>
+            </div>
+            <div class="container_ui__expand" id="close">
+              <div class="heading">
+                <div class="heading_head"></div>
+                <label for="message-1">
+                  x
+                </label>
+              </div>
+              <div class="body">
+                <div class="user">
+                  <div class="face">
+                    <img src="https://s3.amazonaws.com/uifaces/faces/twitter/rem/128.jpg"/>
+                  </div>
+                  <div class="details">
+                    <h2>aspca</h2>
+                    <h3>subj: thanks you are amazing</h3>
+                  </div>
+                </div>
+                <div class="content">
+                  <p><b>Email text</b></br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et commodo ipsum, ut rhoncus velit. Nullam placerat, ipsum sed pretium varius, magna metus ullamcorper magna, at porta quam libero ut est. Mauris cursus in magna in fermentum. Integer mollis convallis quam, vel dignissim ligula rutrum in.<br/><br/>Pellentesque ut purus porta, gravida tellus et, consectetur massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque egestas convallis urna. Aenean commodo leo eget felis rhoncus blandit. Nam sed odio sed augue lobortis rutrum non vel est..</p>
+                  <span>Reply:</span>
+                  <textarea></textarea>
+                </div>
+              </div>
+            </div>
+          </label>
+          <input id="message-2" type="checkbox"></input>
+          <label for="message-2">
+            <div class="container_ui__item">
+              <div class="face">
+                <img src="https://s3.amazonaws.com/uifaces/faces/twitter/boheme/128.jpg"/>
+                <div class="color_bar two">
+                  <p>Now Reading</p>
+                  <span>Read</span>
+                </div>
+              </div>
+              <h2>Nobel prize foundation</h2>
+              <div class="dot"></div>
+              <h3>subj: Your paper on molecular fusion</h3>
+              <h4>We are awarding you the nobel...</h4>
+            </div>
+            <div class="container_ui__expand">
+              <div class="heading two">
+                <div class="heading_head">
+                  <label for="message-2">
+                    x
+                  </label>
+                </div>
+              </div>
+              <div class="body">
+                <div class="user">
+                  <div class="face">
+                    <img src="https://s3.amazonaws.com/uifaces/faces/twitter/boheme/128.jpg"/>
+                  </div>
+                  <div class="details">
+                    <h2>Nobel prize foundation</h2>
+                    <h3>subj: Your paper on molecular</h3>
+                  </div>
+                </div>
+                <div class="content">
+                  <p><b>Email text</b></br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et commodo ipsum, ut rhoncus velit. Nullam placerat, ipsum sed pretium varius, magna metus ullamcorper magna, at porta quam libero ut est. Mauris cursus in magna in fermentum. Integer mollis convallis quam, vel dignissim ligula rutrum in.<br/><br/>Pellentesque ut purus porta, gravida tellus et, consectetur massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque egestas convallis urna. Aenean commodo leo eget felis rhoncus blandit. Nam sed odio sed augue lobortis rutrum non vel est..</p>
+                  <span>Reply:</span>
+                  <textarea></textarea>
+                </div>
+              </div>
+            </div>
+          </label>
+          <input id="message-3" type="checkbox"></input>
+          <label for="message-3">
+            <div class="container_ui__item">
+              <div class="face">
+                <img src="https://s3.amazonaws.com/uifaces/faces/twitter/alexmarin/128.jpg"/>
+                <div class="color_bar three">
+                  <p>Now Reading</p>
+                  <span>Read</span>
+                </div>
+              </div>
+              <h2>megan fox</h2>
+              <div class="dot active"></div>
+              <h3>subj: i miss you</h3>
+              <h4>Where have you been? I've been trying to call you...</h4>
+            </div>
+            <div class="container_ui__expand">
+              <div class="heading three">
+                <div class="heading_head">
+                  <label for="message-3">
+                    x
+                  </label>
+                </div>
+              </div>
+              <div class="body">
+                <div class="user">
+                  <div class="face">
+                    <img src="https://s3.amazonaws.com/uifaces/faces/twitter/alexmarin/128.jpg"/>
+                  </div>
+                  <div class="details">
+                    <h2>megan fox</h2>
+                    <h3>subj: i miss you</h3>
+                  </div>
+                </div>
+                <div class="content">
+                  <p><b>Email text</b></br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et commodo ipsum, ut rhoncus velit. Nullam placerat, ipsum sed pretium varius, magna metus ullamcorper magna, at porta quam libero ut est. Mauris cursus in magna in fermentum. Integer mollis convallis quam, vel dignissim ligula rutrum in.<br/><br/>Pellentesque ut purus porta, gravida tellus et, consectetur massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque egestas convallis urna. Aenean commodo leo eget felis rhoncus blandit. Nam sed odio sed augue lobortis rutrum non vel est..</p>
+                  <span>Reply:</span>
+                  <textarea></textarea>
+                </div>
+              </div>
+            </div>
+          </label>
+          <input id="message-4" type="checkbox"></input>
+          <label for="message-4">
+            <div class="container_ui__item">
+              <div class="face">
+                <img src="https://s3.amazonaws.com/uifaces/faces/twitter/brynn/128.jpg"/>
+                <div class="color_bar four">
+                  <p>Now Reading</p>
+                  <span>Read</span>
+                </div>
+              </div>
+              <h2>Linkedin</h2>
+              <div class="dot active"></div>
+              <h3>subj: Message from bill gates</h3>
+              <h4>I want to add you to my personal network...</h4>
+            </div>
+            <div class="container_ui__expand">
+              <div class="heading four">
+                <div class="heading_head">
+                  <label for="message-4">
+                    x
+                  </label>
+                </div>
+              </div>
+              <div class="body">
+                <div class="user">
+                  <div class="face">
+                    <img src="https://s3.amazonaws.com/uifaces/faces/twitter/brynn/128.jpg"/>
+                  </div>
+                  <div class="details">
+                    <h2>Linkedin</h2>
+                    <h3>Coyo Taco is such a great place!</h3>
+                  </div>
+                </div>
+                <div class="content">
+                  <p><b>Email text</b></br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et commodo ipsum, ut rhoncus velit. Nullam placerat, ipsum sed pretium varius, magna metus ullamcorper magna, at porta quam libero ut est. Mauris cursus in magna in fermentum. Integer mollis convallis quam, vel dignissim ligula rutrum in.<br/><br/>Pellentesque ut purus porta, gravida tellus et, consectetur massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque egestas convallis urna. Aenean commodo leo eget felis rhoncus blandit. Nam sed odio sed augue lobortis rutrum non vel est..</p>
+                  <span>Reply:</span>
+                  <textarea></textarea>
+                </div>
+              </div>
+            </div>
+          </label>
+          <input id="message-5" type="checkbox"></input>
+          <label for="message-5">
+            <div class="container_ui__item">
+              <div class="face">
+                <img src="https://s3.amazonaws.com/uifaces/faces/twitter/allisongrayce/128.jpg"/>
+                <div class="color_bar five">
+                  <p>Now Reading</p>
+                  <span>Read</span>
+                </div>
+              </div>
+              <h2>Jesse pinkman</h2>
+              <div class="dot"></div>
+              <h3>subj: Let's get together sometime yo!</h3>
+              <h4>Hey, how's it going? You free at all this weekend...</h4>
+            </div>
+            <div class="container_ui__expand">
+              <div class="heading five">
+                <div class="heading_head">
+                  <label for="message-5">
+                    x
+                  </label>
+                </div>
+              </div>
+              <div class="body">
+                <div class="user">
+                  <div class="face">
+                    <img src="https://s3.amazonaws.com/uifaces/faces/twitter/allisongrayce/128.jpg"/>
+                  </div>
+                  <div class="details">
+                    <h2>Jesse pinkman</h2>
+                    <h3>subj: Let's get together sometime yo!</h3>
+                  </div>
+                </div>
+                <div class="content">
+                  <p><b>Email text</b></br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et commodo ipsum, ut rhoncus velit. Nullam placerat, ipsum sed pretium varius, magna metus ullamcorper magna, at porta quam libero ut est. Mauris cursus in magna in fermentum. Integer mollis convallis quam, vel dignissim ligula rutrum in.<br/><br/>Pellentesque ut purus porta, gravida tellus et, consectetur massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque egestas convallis urna. Aenean commodo leo eget felis rhoncus blandit. Nam sed odio sed augue lobortis rutrum non vel est..</p>
+                  <span>Reply:</span>
+                  <textarea></textarea>
+                </div>
+              </div>
+            </div>
+          </label>
+          <input id="message-6" type="checkbox"></input>
+          <label for="message-6">
+            <div class="container_ui__item">
+              <div class="face">
+                <img src="https://s3.amazonaws.com/uifaces/faces/twitter/kolage/128.jpg"/>
+                <div class="color_bar six">
+                  <p>Now Reading</p>
+                  <span>Read</span>
+                </div>
+              </div>
+              <h2>James cameron</h2>
+              <div class="dot active"></div>
+              <h3>subj: avatar 2</h3>
+              <h4>Please consider writing the script...</h4>
+            </div>
+            <div class="container_ui__expand">
+              <div class="heading six">
+                <div class="heading_head">
+                  <label for="message-6">
+                    x
+                  </label>
+                </div>
+              </div>
+              <div class="body">
+                <div class="user">
+                  <div class="face">
+                    <img src="https://s3.amazonaws.com/uifaces/faces/twitter/kolage/128.jpg"/>
+                  </div>
+                  <div class="details">
+                    <h2>James cameron</h2>
+                    <h3>subj: avatar 2</h3>
+                  </div>
+                </div>
+                <div class="content">
+                  <p><b>Email text</b></br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et commodo ipsum, ut rhoncus velit. Nullam placerat, ipsum sed pretium varius, magna metus ullamcorper magna, at porta quam libero ut est. Mauris cursus in magna in fermentum. Integer mollis convallis quam, vel dignissim ligula rutrum in.<br/><br/>Pellentesque ut purus porta, gravida tellus et, consectetur massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque egestas convallis urna. Aenean commodo leo eget felis rhoncus blandit. Nam sed odio sed augue lobortis rutrum non vel est..</p>
+                  <span>Reply:</span>
+                  <textarea></textarea>
+                </div>
+              </div>
+            </div>
+          </label>
+        </div>
+      </div>
+
+      @import url(http://fonts.googleapis.com/css?family=Raleway:500,600,700,800,400);
+
+
+      body{
+        background-image:url('http://www.jamiecoulter.co.uk/dev/codepen/blurred_bg.jpg');
+        font-family: 'Raleway', sans-serif;
+        background-size:100% 100%;
+        height:100vh;
+        .title{
+          width: 750px;
+          text-align: center;
+          height: 500px;
+          position: absolute;
+          left: 0;
+          right: 0;
+          margin: auto;
+          color:white;
+          top: 0;
+          bottom: 0;
+          &_inner{
+            float:right;
+            width:260px;
+            text-align:left;
+            position:relative;
+            top:160px;
+            h1{
+              margin:0;
+              text-transform:uppercase
+            }
+            h2{
+              margin:0;
+              font-weight:500;
+              font-size:14px;
+              line-height:24px;
+              margin-top:15px;
+
+            }
+          }
+        }
+        .container{
+          width:800px;
+          width: 750px;
+          text-align:center;
+          height:500px;
+          position:absolute;
+          left:0;
+          right:0;
+          margin:auto;
+          top:0;
+          bottom:0;
+          &_ui{
+            width:350px;
+            background:white;
+            height: 486px;
+            box-shadow: 20px 20px 0px rgba(0, 0, 0, 0.16);
+            &__heading{
+              height:60px;
+              width:89vh;
+              background: #333658;
+              .header_icon{
+                float:left;
+                text-align:left;
+                img{
+                  margin:17px 20px 20px 20px;
+                  cursor:pointer;
+                }
+              }
+              h1{
+                color:rgb(174, 177, 216);
+                text-transform:uppercase;
+                font-weight:700;
+                height: 10px;
+                margin: 0;
+                font-size:12px;
+                float:left;
+                width:33%;
+                letter-spacing:1px;
+                line-height: 64px;
+              }
+              .header_icon{
+                float:left;
+                width:33%;
+                height:40px
+              }
+              // .menu_icon{
+              //   width:33%;
+              //   float:left;
+              //   text-align:right;
+              //   position: relative;
+              //   top: 25px;
+              //   right: 20px;
+              //   cursor:pointer;
+                div{
+                  width: 21px;
+                  height: 2px;
+                  float: right;
+                  display: block;
+                  margin-bottom: 3px;
+                  border-radius: 1px;
+                  clear: both;
+                  background: rgba(0, 0, 0, 0.26);
+                }
+              }
+            // }
+            input[type="checkbox"]{
+              display:none;
+            }
+            label:hover > .container_ui__item .face .color_bar{
+              width:81px;
+              transition-property:width;
+              transition-duration:.4s;
+              -webkit-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+              span{
+                opacity:1;
+                transition-property:opacity;
+                transition-duration:.2s;
+                -webkit-transition-timing-function:linear;
+                transition-delay:.3s;
+              }
+              p{
+                opacity:0;
+              }
+            }
+            input[type="checkbox"]:checked + label > .container_ui__expand{
+              transition-property:left,opacity;
+              transition-duration:.4s;
+              left:380px;
+              z-index:-1;
+              opacity:1;
+              -webkit-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+              pointer-events:none;
+            }
+            .container_ui__expand label{
+              width: 10px;
+              position: absolute;
+              right: 10px;
+              top: 20px;
+              font-size: 12px;
+              font-weight: 700;
+              color: rgb(166, 166, 166);
+              &:hover{
+                color:#444444
+              }
+            }
+            input[type="checkbox"]:checked + label > .container_ui__expand label{
+              pointer-events:auto;
+            }
+            input[type="checkbox"]:checked + label > .container_ui__expand .body .user .face img{
+              animation:pop .5s .5s forwards;
+            }
+            input[type="checkbox"]:checked + label > .container_ui__expand .body .user .details{
+              animation:popup .5s .5s forwards;
+            }
+            input[type="checkbox"]:checked + label > .container_ui__expand .body .content{
+              animation:popup .5s .7s forwards;
+            }
+            input[type="checkbox"]:not(:checked) + label > .container_ui__expand .body .user .face img{
+              animation:poprev .5s .5s forwards;
+              transform:scale(0);
+              transition-property:transform;
+            }
+            input[type="checkbox"]:not(:checked) + label > .container_ui__expand .body .content{}
+            transition-property:opacity,top;
+            transition-duration:0.4s;
+            animation:pop .5s forwards;
+            input[type="checkbox"]:checked + label > .container_ui__item .face .color_bar{
+              right:auto;
+              width: 350px;
+              height: 71px;
+              p{
+                opacity:1;
+                transition-duration:.3s;
+                transition-delay:0.4s;
+                transition-property:opacity
+              }
+              span{
+                display:none;
+
+              }
+            }
+            label{
+              cursor: pointer;
+              display: block;
+              max-height: 71px;
+              float: left;
+              width: 100%;
+              overflow: hidden;
+              &:hover > .container_ui__item{
+                background-color: #EAEAEA !important
+              }
+            }
+            label .container_ui__item{
+              pointer-events:none;
+            }
+            &__item{
+              width: 100%;
+              float: left;
+              height: 74px;
+              text-align:left;
+              color:black;
+              box-shadow: 0px -1px rgba(0, 0, 0, 0.07);
+              color: white;
+              background: #F5F5F5;
+              cursor: pointer;
+              h2,h3,h4{
+                color:black;
+              }
+              h2{
+                font-size: 11px;
+                display: inline-block;
+                color: #515151;
+                text-transform: uppercase;
+                font-weight: 800;
+                margin: 10px 0px 0px 0px;
+                padding-top: 0px;
+              }
+              h3{
+                font-size: 8px;
+                font-weight: 800;
+                margin: 5px 0px 10px 0px;
+                text-transform: uppercase;
+                color: #B2B2B2;
+              }
+              h4{
+                font-size: 10px;
+                font-weight: 600;
+                margin: 0;
+                color: #919191;
+              }
+              .face{
+                float:left;
+                clear:left;
+                margin:0;
+                margin-right:10px;
+                position:relative;
+                img{
+                  height: 81px;
+                  /* margin: 10px; */
+                  /* border-radius: 5px; */
+                }
+                .color_bar{
+                  float: right;
+                  width: 6px;
+                  background: rgb(86, 182, 153);
+                  position: absolute;
+                  right: 0;
+                  text-align:center;
+                  height: 71px;
+                  top: 0;
+                  z-index:1;
+                  p{
+                    opacity:0;
+                    margin-top:26px;
+                  }
+                  span{
+                    opacity:0;
+                    font-size:12px;
+                    position:relative;
+                    top: -56px;
+                  }
+                }
+              }
+            }
+            .dot{
+              width: 6px;
+              height: 6px;
+              background: #cdcdcd;
+              border-radius: 100%;
+              display: inline-block;
+              position: relative;
+              top: -1px;
+              z-index:-0;
+              left: 3px;
+            }
+            .active{
+              background:rgb(108, 190, 99);
+            }
+            &__expand{
+              width:350px;
+              box-shadow: 20px 20px 0px rgba(0, 0, 0, 0.16);
+              height: 486px;
+              position:absolute;
+              top:0;
+              transition-delay:.2s;
+              transition-property:left,opacity;
+              opacity:0;
+              transition-duration:.4s;
+              left:0;
+              z-index:-1;
+              background:white;
+              .body{
+                .content{
+                  text-align:left;
+                  position:relative;
+                  top:10px;
+                  opacity:0;
+                  p{
+                    b{
+                      color:#444444;
+                    }
+                    text-align: justify;
+                    font-size:10px;
+                    line-height:20px;
+                    padding:25px;
+                    color:rgb(155, 155, 155);
+                    font-weight:500;
+                  }
+                  span{
+                    display:block;
+                    padding:0px 25px;
+                    font-weight:800;
+                    position:relative;
+                    top:-10px;
+                    font-size:10px;
+                    color:rgb(125, 125, 125);;
+                  }
+                  textarea{
+                    margin: 0px 25px;
+                    width: 295px;
+                    resize: none;
+                    border: 1px solid rgb(224, 224, 224);
+                    height: 60px;
+                    border-radius: 3px;
+                  }
+                }
+                .user{
+                  border-bottom: 1px solid rgb(236, 236, 236);
+                  height: 65px;
+
+                  .details{
+                    opacity:0;
+                    top:10px;
+                    position:relative;
+                    float:left;
+                    width: 240px;
+                    text-align: left;
+                    h2{
+                      font-size: 14px;
+                      display: inline-block;
+                      color: #515151;
+                      text-transform: uppercase;
+                      font-weight: 800;
+                      margin: 13px 0px 0px 0px;
+                      padding-top: 0px;
+                    }
+                    h3{
+                      font-size: 12px;
+                      font-weight: 300;
+                      margin: 5px 0px 10px 0px;
+                      text-transform: uppercase;
+                      color: #B2B2B2;
+                    }
+                    h4{
+                      font-size: 10px;
+                      font-weight: 600;
+                      margin: 0;
+                      color: #919191;
+                    }
+                  }
+                  .face{
+                    float: left;
+                    img{
+                      width: 40px;
+                      transform:scale(0);
+                      border-radius: 100%;
+                      border: 2px solid rgb(255, 255, 255);
+                      margin: 10px 25px;
+                    }
+                  }
+                }
+              }
+              .heading{
+                height: 10px;
+                width: 100%;
+                background: #56b699;
+                &_head{
+                  h1{
+                    color: #aeb1d8;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    height: 10px;
+                    margin: 0;
+                    font-size: 12px;
+                    float: left;
+                    width: 100%;
+                    letter-spacing: 1px;
+                    line-height: 64px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .one{
+
+      }
+
+      .two{
+        background:#5674B6 !important;
+      }
+
+      .three{
+        background:#D05E5E !important
+      }
+
+      .four{
+        background:#ACD35D !important
+      }
+
+      .five{
+        background:#EA9739 !important
+      }
+
+      .six{
+        background:#B6568D !important
+      }
+
+      body .container_ui input[type="checkbox"]:checked + label > .container_ui__expand a{
+        pointer-events:auto;
+      }
+
+      /* Let's do some animations! */
+
+      @keyframes pop{
+        0%{transform:scale(0)}
+        50%{transform:scale(1.2)}
+        100%{transform:scale(1)}
+      }
+
+      @keyframes poprev{
+        0%{transform:scale(1)}
+        50%{transform:scale(1.2)}
+        100%{transform:scale(0)}
+      }
+
+      @keyframes popup{
+        from{top:10px;opacity:0}
+        to{top:0px;opacity:1}
+      }

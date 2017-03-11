@@ -1,23 +1,23 @@
-<ul class="nav nav-pills nav-stacked">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</script>
+
+<div class="inboxnavbar"><ul class="inboxnavbuttonlinks">
   <li class="<%= active_page(:inbox) %>">
     <%= link_to mailbox_inbox_path do  %>
-        <span class="label label-danger pull-right"><%=unread_messages_count%></span>
-        <em class="fa fa-inbox fa-lg"></em>
-        <span>Inbox</span>
+       <span>inbox</span>
     <% end %>
   </li>
   <li class="<%= active_page(:sent) %>">
     <%= link_to mailbox_sent_path do %>
-
-        <em class="fa fa-paper-plane-o fa-lg"></em>
-        <span>Sent</span>
+        <span>sent</span>
     <% end %>
   </li>
 
   <li class="<%= active_page(:trash) %>">
     <%= link_to mailbox_trash_path do %>
-        <em class="fa fa-trash-o fa-lg"></em>
-        <span>Trash</span>
+        <i class="fa fa-trash-o fa-1x" aria-hidden="true"></i>
+
     <% end %>
   </li>
-</ul>
+</ul></div>

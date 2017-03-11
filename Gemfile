@@ -4,10 +4,12 @@ git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
 end
+
+
+#Haml is a templating engine for HTML
+gem 'haml-rails'
 # Hiding our api keys with a .env file wtih dotenv-rails
 gem 'dotenv-rails'
-# Add descrip please anika thanks!!!! :)
-gem 'bourbon'
 #Hirb prettifies Database queries in Rails-c for us
 gem 'hirb'
 #Chosen-rails gives .select features might remove was used in compose section of mailbox
