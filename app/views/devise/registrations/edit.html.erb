@@ -39,6 +39,10 @@
 
   <div class="field">
   <%= f.file_field :avatar %>
+
+  <% if @user.avatar? %>
+    <%= image_tag @user.avatar.url(:thumb) %>
+  <% end %>
   </div>
 
   <div class="actions">
