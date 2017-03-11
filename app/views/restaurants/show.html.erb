@@ -32,6 +32,7 @@
 <br>
 <br>
 <br>
+<!-- Search bar for restaurants -->
 <div class="text-center">
   <h1>Find Your Favorite Restaurants!!</h1>
   <%= form_tag "/restaurants/show" do %>
@@ -42,6 +43,7 @@
 
 <!-- Foursquare-Api-Decontruct-Json -->
 <!-- Creates Divs with restaurants from Api request -->
+<!-- I will refactor later !! -->
 <div id="main-rest-div">
   <% var = 0 %>
   <% @response.parsed_response['response']['groups'][0]['items'].each do |hash| %>

@@ -11,7 +11,7 @@
 <%= form_for :conversation, url: :conversations, html: { class: "" } do |f| %>
     <div class="form-group">
       <%= f.label :recipients %>
-      <!-- Javascript for this isn't working correctly, it's loading on page reload -->
+      <!-- Javascript for this isn't working correctly, it's loading on page reload 2 Year old tutorial Op-->
       <%= f.select(:recipients, mailable_users.collect {|p| [ p.email, p.id ] }, {}, { multiple: true , class: "chosen-select form-control" })%>
     </div>
     <div class="form-group">
