@@ -12,12 +12,21 @@ class RestaurantsController < ApplicationController
     @todays_date = 20170307
     @userless_request = "https://api.foursquare.com/v2/venues/explore?client_id=#{@clientid}&client_secret=#{@client_secret}&ll=25.803076,-80.204268&v=#{@todays_date}&query=#{@search}&venuePhotos=1"
     @response = HTTParty.get @userless_request
+
+    @restaurant = Restaurant.new
   end
 
   # GET /restaurants/1
   # GET /restaurants/1.json
   def show
+    @restaurants = Restaurant.all
     @search = params[:term]
+    @clientid = ENV['CLIENT_ID']
+    @client_secret = ENV['CLIENT_SECRET']
+    @todays_date = 20170307
+    @userless_request = "https://api.foursquare.com/v2/venues/explore?client_id=#{@clientid}&client_secret=#{@client_secret}&ll=25.803076,-80.204268&v=#{@todays_date}&query=#{@search}&venuePhotos=1"
+    @response = HTTParty.get @userless_request
+    @restaurant = Restaurant.new
   end
 
   # GET /restaurants/new
@@ -32,16 +41,27 @@ class RestaurantsController < ApplicationController
   # POST /restaurants
   # POST /restaurants.json
   def create
+  #   # @restaurant = Restaurant.find_or_initialize_by(restaurant_params)
+    restaurant_match = Restaurant.find_by(restaurant_params)#(restaurantId: restaurant_params[:restaurantId])
     @restaurant = Restaurant.new(restaurant_params)
-
-    respond_to do |format|
-      if @restaurant.save
-        format.html { redirect_to @restaurant, notice: 'Restaurant was successfully created.' }
-        format.json { render :show, status: :created, location: @restaurant }
-      else
-        format.html { render :new }
-        format.json { render json: @restaurant.errors, status: :unprocessable_entity }
-      end
+    # raise RuntimeError.new "restaurant match is nil" if restaurant_match.nil?
+    conditions = !restaurant_match.nil? && current_user.restaurants.find_by(restaurant_params).nil?#(restaurantId: restaurant_params[:restaurantId]).nil?
+    if conditions
+      Match.create(user: current_user, restaurant: restaurant_match) #@restaurant
+    elsif restaurant_match.nil?
+      # @restaurant = Restaurant.new(restaurant_params)
+      @restaurant.save
+      Match.create(user: current_user, restaurant: @restaurant)
+  #     respond_to do |format|
+  #       if @restaurant.save
+  #         Match.create!(user: current_user, restaurant: @restaurant)
+  #         format.html {redirect_to @restaurant, notice: 'Restaurant was successfully created.' }
+  #         format.json { render :show, status: :created, location: @restaurant }
+  #       else
+  #         format.html { render :new }
+  #         format.json { render json: @restaurant.errors, status: :unprocessable_entity }
+  #       end
+  #     end
     end
   end
 

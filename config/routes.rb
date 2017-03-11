@@ -1,9 +1,17 @@
 Rails.application.routes.draw do
   root 'welcome#index'
-  # resources :restaurants
-  
-  get "restaurants/" => "restaurants#index"
-  post "restaurants/" => "restaurants#index"
+  get "welcome/testfile" => "welcome#testfile"
+  resources :restaurants
+  post "restaurants/show" => "restaurants#show"
+
+
+
+  # get "restaurants/" => "restaurants#index"
+  # post "restaurants/" => "restaurants#index"
+  # post "/restaurants/create" => "restaurants#create"
+  # get "/restaurants/new" => "restaurants#new"
+  # post "welcome/restaurants/create" => "restaurants#create"
+
   resources :profiles
   devise_for :users, class_name: 'FormUser', :controllers => { omniauth_callbacks: 'omniauth_callbacks', registrations: 'registrations'}
   devise_scope :user do
@@ -15,7 +23,7 @@ Rails.application.routes.draw do
   get "mailbox/inbox" => "mailbox#inbox", as: :mailbox_inbox
   get "mailbox/sent" => "mailbox#sent", as: :mailbox_sent
   get "mailbox/trash" => "mailbox#trash", as: :mailbox_trash
-  get "welcome/testfile" => "welcome#testfile"
+
   resources :profile
   resources :conversations do
   member do
