@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-
+<!--  -->
 <!-- NAVBAR  -->
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container">
@@ -67,7 +67,7 @@
     <% else %>
       <%= "Check Website" %>
     <% end %>
-    <%= form_for @restaurant (url: "/restaurants") do |f| %>
+    <%= form_for @restaurant  do |f| %>
       <%= f.hidden_field :name, value: hash['venue']['name'] %>
       <%= f.hidden_field :location, value: hash['venue']['location']['formattedAddress'].join %>
       <%= f.hidden_field :menu_url, value: (hash['venue']['menu'] ? (hash['venue']['menu']['mobileUrl'] or hash['venue']['menu']['url']) : nil) %>
