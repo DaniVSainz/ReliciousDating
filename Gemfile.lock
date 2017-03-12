@@ -253,11 +253,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-<<<<<<< HEAD
-=======
   aws-sdk
-  bourbon
->>>>>>> DevisePaperclip
   byebug
   chosen-rails
   coffee-rails (~> 4.2)

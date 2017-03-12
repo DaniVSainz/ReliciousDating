@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   authenticated :user do
-  root :to => 'welcome#testfile', as: :authenticated_root #Currently profiles show has a bug !!
+  root :to => 'profiles#index', as: :authenticated_root #Currently profiles show has a bug !!
   end
   root :to => 'welcome#index'
   get "welcome/testfile" => "welcome#testfile"
