@@ -5,9 +5,12 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-
 #Haml is a templating engine for HTML
 gem 'haml-rails'
+#Amazon webservices
+gem 'aws-sdk'
+#Handles image attachments
+gem 'paperclip'
 # Hiding our api keys with a .env file wtih dotenv-rails
 gem 'dotenv-rails'
 #Hirb prettifies Database queries in Rails-c for us

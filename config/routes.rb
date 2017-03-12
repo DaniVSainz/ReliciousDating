@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  root 'welcome#index'
+  authenticated :user do
+  root :to => 'welcome#testfile', as: :authenticated_root #Currently profiles show has a bug !!
+  end
+  root :to => 'welcome#index'
   get "welcome/testfile" => "welcome#testfile"
   resources :restaurants
   post "restaurants/show" => "restaurants#show"
