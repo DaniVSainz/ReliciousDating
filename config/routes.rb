@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   end
   root :to => 'welcome#index'
   get "welcome/testfile" => "welcome#testfile"
+  get "welcome/usermatch" => "welcome#usermatch"
   resources :restaurants
   post "restaurants/show" => "restaurants#show"
 
