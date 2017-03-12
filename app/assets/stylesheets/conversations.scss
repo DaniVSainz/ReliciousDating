@@ -1,3 +1,41 @@
 // Place all the styles related to the conversations controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.parallax {
+    background-image: url('http://www.sma-li.com/media/slide/image/cache/960x550-center/h/e/healthy-food_1.jpg');
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+.panel-bodyuser {
+  // background-color: grey;
+}
+
+.rowusermssg {
+  height: 100%;
+  width: 100%;
+  background: black;
+}
+
+.usermessagebox {
+  // background-color: black;
+}
+
+.col-md-8_usermssg {
+align-items: center;
+width: 50vw;
+padding-left: 100px;
+position: relative;
+left: 88px;
+top: 95px;
+}
+
+.panel {
+  // display: flex;
+  // text-align: center;
+}

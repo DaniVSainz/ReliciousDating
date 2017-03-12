@@ -3,31 +3,25 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <%= stylesheet_link_tag "//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" %>
 
-<link rel="stylesheet" href="assets/stylesheets/profiles.scss">
+
+<div class="parallax">
 
 
-
-<div class="row">
-  <div class="spacer"></div>
+<div class="rowusermssg">
+  <!-- <div class="spacer"></div>
   <div class="col-md-12">
     <%= link_to "Compose", new_conversation_path, class: "btn btn-success" %>
     <div class="spacer"></div>
-  </div>
+  </div> -->
 
-  <div class="col-md-4">
-    <div class="panel panel-default">
-      <div class="panel-body">
-        <%= render 'mailbox/folders' %>
-      </div>
-    </div>
-  </div>
 
-  <div class="col-md-8">
-      <div class="panel panel-default">
-        <div class="panel-body">
-          <%= render partial: 'messages' %>
-        </div>
-        <div class="panel-footer">
+
+  <div class="col-md-8_usermssg">
+      <div class="panel">
+        <div class="panel-bodyuser">
+          <%= render 'messages' %>
+
+        <div class="usermessagebox">
           <!-- Reply Form -->
           <%= form_for :message, url: reply_conversation_path(conversation) do |f| %>
               <div class="form-group">
@@ -39,5 +33,6 @@
         </div>
       </div>
     </div>
-
+</div>
+</div>
 </div>
