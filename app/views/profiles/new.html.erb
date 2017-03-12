@@ -29,6 +29,18 @@
       <%= f.text_field :age, placeholder: "Age" %>
     </div>
 
+    <div class="field3">
+      <!-- <%= f.label :age %> -->
+      <%= f.text_field :username, placeholder: "username" %>
+    </div>
+
+    <div class="field3">
+      <!-- <%= f.label :age %> -->
+      <%= f.text_field :bio, placeholder: "bio" %>
+    </div>
+    <div class="field">
+    <%= f.file_field :avatar %>
+    </div>
     <%= f.hidden_field :user_id, :value => current_user.id%>
 
     <div class="actions">
