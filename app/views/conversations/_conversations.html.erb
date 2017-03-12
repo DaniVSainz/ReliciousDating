@@ -1,19 +1,30 @@
 <% @receipts.each do |receipt| %>
     <% message = receipt.message %>
-    <div class="media">
-      <div class="media-left">
-        <!-- user avators can go here -->
-        <a href="#">
-          <img class="media-object" src="http://placehold.it/64x64" alt="...">
-        </a>
-      </div>
-      <div class="media-body">
-        <h4 class="media-heading">
-          <%= message.sender %> <br>
-          <small><b>Subject: </b><%= message.subject %></small><br>
-          <small><b>Date: </b><%=  message.created_at.strftime("%A, %b %d, %Y at %I:%M%p") %></small>
-        </h4>
-        <%= message.body %>
-      </div>
-    </div>
+
+
+                  <div class="panel-body">
+                      <ul class="list-group">
+                          <li class="list-group-item">
+                              <div class="row">
+                                  <div class="col-xs-2 col-md-1">
+                                      <img src="http://placehold.it/80" class="img-circle img-responsive" alt="" /></div>
+                                  <div class="col-xs-10 col-md-11">
+                                      <div>
+                                          <div class="mic-info">
+                                            <%= message.sender %> <br>
+                                            <small><b>Subject: </b><%= message.subject %></small><br>
+                                            <small><b>Date: </b><%=  message.created_at.strftime("%A, %b %d, %Y at %I:%M%p") %></small>
+                                          </div>
+                                      </div>
+                                      <div class="comment-text">
+                                          <%= message.body %>
+                                      </div>
+
+
+          <a  href="#" class="btn btn-sm btn-hover btn-primary" href="#reply" ><span class="glyphicon glyphicon-share-alt" style="padding-right:3px;"></span>Reply</a>
+            <a href="#" class="btn btn-sm btn-hover btn-danger"><span class="glyphicon glyphicon-remove" style="padding-right:3px;"></span>Delete</a>
+
+
+                                  </div>
+                              </div>
 <% end %>
