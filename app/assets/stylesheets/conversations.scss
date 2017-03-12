@@ -1,16 +1,48 @@
 // Place all the styles related to the conversations controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@font-face {
+	font-family: 'Raleway';
+	src: font-url("raleway.woff");
+}
+
+
 .parallax {
     background-image: url('http://www.sma-li.com/media/slide/image/cache/960x550-center/h/e/healthy-food_1.jpg');
     background-size: cover;
+    max-width: 100%;
     height: 100vh;
-    width: 100vw;
+    // width: 100vw;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
   }
+
+h4.media-heading{
+  font-size: 25px;
+}
+
+.media {
+  font-family: 'Raleway';
+  // font-family: 'Catamaran', sans-serif;
+  font-weight:bold;
+  font-size: 25px;
+
+}
+
+.media-body {
+  font-weight: bolder;
+}
+
+.panel-heading {
+  margin: 0 auto;
+  padding: 0;
+  background-color: white;
+}
 
 .panel-bodyuser {
   // background-color: grey;
@@ -19,7 +51,7 @@
 .rowusermssg {
   height: 100%;
   width: 100%;
-  background: black;
+  // background: black;
 }
 
 .usermessagebox {
