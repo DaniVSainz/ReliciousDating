@@ -1,0 +1,10 @@
+ <div class="priconvonavbar">
+<%= link_to "Compose", new_conversation_path, class: "btn btn-success" %>
+<!--
+<% if conversation.is_trashed?(current_user) %>
+<%= link_to 'Untrash', untrash_conversation_path(conversation), class: 'btn btn-info', method: :post %>
+<% else %> -->
+<%= link_to 'Move to trash', trash_conversation_path(conversation), class: 'btn btn-danger', method: :post,
+          data: {confirm: 'Are you sure?'} %>
+<!-- <% end %> -->
+</div>

@@ -2,37 +2,64 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <%= stylesheet_link_tag "//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" %>
-
+<nav class="fixed-nav-bar">
+  <span class="navbarlogo">Relicious</span>
+  <ul>
+  <li><%= link_to "Home" %></li>
+  <li><%= link_to "Messages"%></li>
+  <li><%= link_to "Search"%></li>
+  <li><%= link_to "Log Out"%></li>
+  </ul>
+</nav>
 
 <div class="parallax">
 
 
-<div class="rowusermssg">
-  <!-- <div class="spacer"></div>
-  <div class="col-md-12">
-    <%= link_to "Compose", new_conversation_path, class: "btn btn-success" %>
-    <div class="spacer"></div>
-  </div> -->
-
-
-
   <div class="col-md-8_usermssg">
+    <div class ="userconvobuttons">
+      <!-- <%= link_to "Inbox", mailbox_inbox_path, class: "btn btn-warning composebut"  %> -->
+    <%= link_to 'Delete', trash_conversation_path(conversation), class: 'btn btn-danger trashbut', method: :post,
+              data: {confirm: 'Are you sure?'} %>
+            </div>
+            <%= link_to "Inbox", mailbox_inbox_path, class: "btn btn-warning composebut"  %>
       <div class="panel">
+
         <div class="panel-bodyuser">
-          <%= render 'messages' %>
+          <!-- <% render 'showmessbuttons.html.erb' %> -->
+
+        <% @receipts.each do |receipt| %>
+            <% message = receipt.message %>
+            <div class="media">
+              <div class="media-left">
+                <!-- user avators can go here -->
+                <!-- <a href="#"> -->
+                  <img class="media-object" src="http://placehold.it/64x64" alt="...">
+                <!-- </a>
+              </div> -->
+              <div class="media-body">
+                <h4 class="media-heading">
+                  <%= message.sender.email %> <br>
+                  <small><b>Subject: </b><%= message.subject %></small><br>
+                  <small><b>Date: </b><%=  message.created_at.strftime("%A, %b %d, %Y at %I:%M%p") %></small>
+                </h4>
+                <%= message.body %>
+              </div>
+            </div>
+        <% end %>
+
 
         <div class="usermessagebox">
-          <!-- Reply Form -->
           <%= form_for :message, url: reply_conversation_path(conversation) do |f| %>
               <div class="form-group">
                 <%= f.text_area :body, placeholder: "Reply Message", rows: 4, class: "form-control" %>
               </div>
               <%= f.submit "Reply", class: 'btn btn-danger pull-right' %>
           <% end %>
-          <div class="clearfix"></div>
+
         </div>
       </div>
     </div>
+</div>
 </div>
 </div>
 </div>

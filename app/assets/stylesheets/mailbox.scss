@@ -3,8 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .parallax {
-    /* The image used */
-    // background-image: url('http://www.summertomato.com/wp-content/uploads/2015/11/Tomato-Heart-650px-650x433.jpg');
+  
     background-image: url('http://www.sma-li.com/media/slide/image/cache/960x550-center/h/e/healthy-food_1.jpg');
     background-size: cover;
     height: 100vh;
@@ -15,7 +14,7 @@
     background-size: cover;
     padding: 0;
     margin: 0;
-    overflow-x: hidden; 
+    overflow-x: hidden;
   }
 
 .img.img-circle.img-responsive {
