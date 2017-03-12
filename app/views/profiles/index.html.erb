@@ -37,10 +37,10 @@
           <img src="http://remtsoy.com/experiments/user_card/img/avatar.jpg">
         </div>
         <div class="box-inner">
-          <h3 class="name"><%= current_user.name%></h3>
+          <h3 class="name"><%= current_user.profile.username%></h3>
           <h4 class="occupation"><%=current_user.profile.gender%></h4>
           <p class="location"><i class="fa fa-map-marker"></i><%= current_user.profile.age%></p>
-          <!-- <h3 class="followers-title">2.5k+ followers</h3> -->
+          <h3 class="followers-title"><%= current_user.profile.bio %></h3>
         </div>
         <ul class="social-list">
           <li><a href="#" class="fa fa-facebook">Home</a></li>
