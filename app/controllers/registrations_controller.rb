@@ -14,4 +14,8 @@ class RegistrationsController < Devise::RegistrationsController
       resource.update_with_password(params)
     end
   end
+  
+  def after_sign_up_path_for(resource)
+    '/profiles/new' # Or :prefix_to_your_route
+  end
 end
