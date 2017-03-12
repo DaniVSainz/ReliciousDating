@@ -34,7 +34,7 @@
     <div class="box-wrapper">
       <div class="box">
         <div class="avatar">
-          <img src="http://remtsoy.com/experiments/user_card/img/avatar.jpg">
+          <%= image_tag(current_user.profile.avatar.url(:thumb)) %>
         </div>
         <div class="box-inner">
           <h3 class="name"><%= current_user.profile.username%></h3>
