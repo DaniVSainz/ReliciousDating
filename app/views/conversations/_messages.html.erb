@@ -11,7 +11,7 @@
       <div class="media-left">
         <!-- user avators can go here -->
         <a href="#">
-          <%= image_tag(User.find_by(id: receipt.sender_id).avatar.url(:thumb)) %>
+          <%= image_tag User.find_by(id: receipt.message.sender_id).avatar.url(:thumb) %>
         </a>
       </div>
       <div class="media-body">
@@ -24,7 +24,3 @@
       </div>
     </div>
 <% end %>
-
-
-
-<%= image_tag(current_user.avatar.url(:thumb)) %>
