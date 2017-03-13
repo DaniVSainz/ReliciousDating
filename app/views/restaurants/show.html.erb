@@ -11,13 +11,23 @@
   </ul>
 </nav>
 <!-- Search bar for restaurants -->
-<div class="text-center">
-  <h1>Find Your Favorite Restaurants!!</h1>
-  <%= form_tag "/restaurants/show" do %>
-  <%= search_field_tag :term %>
-  <%= submit_tag "Go!" %>
-  <% end %>
-</div>
+ <!-- <form class="searchboxform"> -->
+
+  <!-- <input type="search" id="sbx" name="searchbox" placeholder="focus here to animate..."/>
+  <input type="submit" id="btn" class="material-icons" value="send" name="button"/>
+  <span id="line"></span>
+</form>  -->
+
+<%= form_tag("/restaurants/show",  {:class => 'searchboxform'}) do %>
+  <%= search_field_tag :searchbox, nil, name: 'term', id: 'sbx', :placeholder => 'Enter restaurant search term' %>
+  <%= submit_tag("send", class: "material-icons", id: "btn") %>
+  <span id="line"></span>
+    <%end%>
+
+
+
+<!-- <div class="text-center"> -->
+
 
 <!-- Foursquare-Api-Decontruct-Json -->
         <% var = 0 %>

@@ -1,5 +1,3 @@
-// $('.grid').masonry({
-//   // options
-//   itemSelector: '.grid-item',
-//   columnWidth: 200
+// $('.search-button').click(function(){
+//   $(this).parent().toggleClass('open');
 // });

@@ -987,3 +987,40 @@ config-environements-production- config.cache_store = :memory_store <- <% cache 
           <% end %>
         </div>
         <% end %>
+
+
+
+        <%= form_tag "/restaurants/show" do %>
+        <section class="webdesigntuts-workshop">
+        	<form action="" method="">
+
+            <%= search_field_tag :term, class: "search", type: "text", id: "search" %>
+            <%= hinted_text_field_tag :search, params[:term], "Find your favorite restaurants to be able to match to others that love them too!", :size => 30  %>
+            <%= submit_tag "Go!", class: "submit"%>
+
+
+
+          <%= search_field_tag :term, class: 'search' %>
+          <%= hinted_text_field_tag :search, params[:term], "Find your favorite restaurants to be able to match to others that love them too!", :size => 30  %>
+
+
+          <div class="bodysearchbar">
+          <div class="wrappersearchbar">
+            <%= form_tag "/restaurants/show" do %>
+          <%= search_field_tag :term, class: "search", type: "text", id: "search" %>
+          <%= submit_tag "Go!", class: "submit", type: "submit", value: " "%>
+          <% end %>
+        </div>
+
+        <%= form_tag "/restaurants/show" do %>
+            <div class="searchstyle"><%= hinted_text_field_tag :search, params[:term], "Find your favorite restaurants to be able to match to others that love them too!", :size => 30 %>
+            <%= submit_tag "Go!", class: "submit"%>
+
+            <%= form_tag "/restaurants/show" do %>
+            <div class="search">
+              <span id='search-box'><%= search_field_tag :term %></span>
+                <span class="search-icon"><%= submit_tag %></span>
+            </div>
+                <%end%>
+
+                ("searchbox", nil, id: "sbx", :placeholder => 'Enter restaurant search term')

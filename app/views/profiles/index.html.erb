@@ -4,11 +4,11 @@
 <link href="https://fonts.googleapis.com/css?family=Parisienne" rel="stylesheet">
 
 <nav class="fixed-nav-bar">
-  <span class="navbarlogo_mainprof">Relicious</span>
+  <span class="navbarlogo">Relicious</span>
   <ul class="mainprof">
-  <li><%= link_to "Home" , mailbox_inbox_path %></li>
+  <li><%= link_to "Home" , profiles_path %></li>
   <li><%= link_to "Messages", mailbox_inbox_path%></li>
-  <li><%= link_to "Search", "restaurants#show"%></li>
+  <li><%= link_to "Search", restaurants_show_path %></li>
   <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
 
   </ul>
