@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20170312201334) do
+=======
+ActiveRecord::Schema.define(version: 20170312213801) do
+>>>>>>> 1f1d04d54de7130aa11bca3a4b9a8f9f17c891b3
 
   create_table "favorites", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -99,13 +103,32 @@ ActiveRecord::Schema.define(version: 20170312201334) do
     t.datetime "updated_at",    null: false
   end
 
+  create_table "pictures", force: :cascade do |t|
+    t.integer  "user_id"
+    t.string   "title"
+    t.string   "body"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.index ["user_id"], name: "index_pictures_on_user_id"
+  end
+
   create_table "profiles", force: :cascade do |t|
     t.string   "gender"
     t.string   "gender_pref"
     t.string   "age"
     t.integer  "user_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+    t.text     "bio"
+    t.string   "username"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
     t.index ["user_id"], name: "index_profiles_on_user_id"
   end
 
@@ -134,6 +157,10 @@ ActiveRecord::Schema.define(version: 20170312201334) do
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
     t.string   "name"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

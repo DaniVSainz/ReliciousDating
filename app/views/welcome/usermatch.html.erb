@@ -1,0 +1,19 @@
+<% if user.matches != nil %>
+  <% user_matches = [] %>
+  <% current_user.users.each do |user| %>
+    <% if user_matches.include? user %>
+    <% else %>
+      <% user_matches << user %>
+    <% end %>
+  <% end %>
+<% end %>
+<% user_matches.each do |user| %>
+  user.
+
+
+
+
+<%= User.first.profile.avatar.url(:thumb) %>
+<%= User.first.profile.username %>
+<%= User.first.age %>
+<%= User.first.profile.bio %>
