@@ -30,7 +30,7 @@
             <!-- <div class="itemven"> -->
               <%= image_tag picture, width: "300px", height: "auto" %>
               <div class="text">
-                <%= var += 1 %>
+
                 <% hash['venue']['id'] %>
     <h1><%= ven_name = hash['venue']['name'] %></h1>
     <h2 class="animate-text"><%= hash['venue']['contact']['formattedPhone'] %></h2>
@@ -39,6 +39,7 @@
     <% if hash['venue']['menu'] != nil %>
       <% if hash['venue']['menu']['mobileUrl'] != nil %>
         <p class="animate-text">  <%=  link_to 'Menu' , hash['venue']['menu']['mobileUrl'], id: "ghost-button"%>
+        <%= link_to "Website" , hash['venue']['url'] , id: 'ghost-button'%>
       <% else %>
         <%= hash['venue']['menu']['url'] %>
       <% end %>
