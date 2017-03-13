@@ -27,22 +27,28 @@
         <div class="panel-bodyuser">
           <!-- <% render 'showmessbuttons.html.erb' %> -->
 
-        <% @receipts.each do |receipt| %>
-            <% message = receipt.message %>
+          <% fake_receipts = [] %>
+          <% @receipts.each do |receipt| %>
+            <% if fake_receipts.include? receipt.message %>
+            <% else %>
+              <% fake_receipts << receipt.message %>
+            <% end %>
+          <% end %>
+          <% fake_receipts.each do |receipt| %>
             <div class="media">
               <div class="media-left">
                 <!-- user avators can go here -->
                 <!-- <a href="#"> -->
-                  <%= image_tag (User.find_by(id: message.sender_id).profile.avatar.url(:thumb)) %>
+                  <%= image_tag (User.find_by(id: receipt.sender_id).profile.avatar.url(:thumb)) %>
                 <!-- </a>
               </div> -->
               <div class="media-body">
                 <h4 class="media-heading">
-                  <%= message.sender.email %> <br>
-                  <small><b>Subject: </b><%= message.subject %></small><br>
-                  <small><b>Date: </b><%=  message.created_at.strftime("%A, %b %d, %Y at %I:%M%p") %></small>
+                  <%= receipt.sender.email %> <br>
+                  <small><b>Subject: </b><%= receipt.subject %></small><br>
+                  <small><b>Date: </b><%=  receipt.created_at.strftime("%A, %b %d, %Y at %I:%M%p") %></small>
                 </h4>
-                <%= message.body %>
+                <%= receipt.body %>
               </div>
             </div>
         <% end %>

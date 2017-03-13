@@ -41,11 +41,11 @@
 
         </div>
         <ul class="social-list">
-          <li><a href="#" class="fa fa-facebook">Home</a></li>
-            <li><a href="#" class="fa fa-facebook">Messages</a></li>
+          <li><%= link_to "Home" , profiles_path,class: "fa fa-facebook" %></li>
+          <li><%= link_to "Messages", mailbox_inbox_path, class:"fa fa-facebook" %></li>
           <li><a href="#" class="fa fa-facebook">Matches</a></li>
           <li><a href="#" class="fa fa-dribbble">Change Photo</a></li>
-          <li><a href="#" class="fa fa-pinterest">Edit Bio</a></li>
+          <li><%= link_to "Edit Bio","http://localhost:3000/profiles/#{current_user.profile.id}" ,class:"fa fa-pinterest" %></li>
           <li><a href="#" class="fa fa-linkedin">See Profile</a></li>
         </ul>
       </div>
