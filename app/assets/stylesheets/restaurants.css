@@ -238,8 +238,8 @@ div.wellven {
   display: inline-block;
   width: 125px;
   padding: 8px;
-  color: black;
-  border: 1px solid black;
+  color: white;
+  border: 1px solid white;
   border-radius: 5px;
   text-align: center;
   outline: none;
@@ -249,18 +249,13 @@ div.wellven {
 }
 #ghost-button:hover,
 #ghost-button:active {
-  background-color: black;
+  background-color: rgba(7,203,201,.5);
   color: white;
   transition: background-color 0.3s ease-in,
               color 0.3s ease-in;
 }
 
-#restaurant-div {
-  border: 2px solid black;
-  height: auto;
-  width: 400px;
-  float: left;
-}
+
 
 .main-rest-div {
   margin: auto;
