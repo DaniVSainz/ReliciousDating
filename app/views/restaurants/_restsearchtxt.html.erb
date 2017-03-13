@@ -1,0 +1,48 @@
+<% @response.parsed_response['response']['groups'][0]['items'].each do |hash| %>
+  <! VENUE PICTURE -->
+  <!-- <div class="venuepic"> -->
+    <!-- <% if hash['venue']['photos']['count'] != 0 %>
+    <% picture = hash['venue']['photos']['groups'][0]['items'][0]['prefix'] + "original" + hash['venue']['photos']['groups'][0]['items'][0]['suffix'] %>
+    <!- RENDERS PIC -->
+    <%= image_tag picture, width:"300", height: "auto" %></div>
+      <% else %>
+      <%= "Custome Query?" %>
+      <% end %>
+    </div>
+  </div>
+  <%= var += 1 %>
+  <% hash['venue']['id'] %>
+  <!-- VENUE INFO/NAME/ADDRESS -->
+  <div class="well">
+    <%= ven_name = hash['venue']['name'] %><br>
+    <%= hash['venue']['contact']['formattedPhone'] %><br>
+    <%= hash['venue']['location']['formattedAddress'].join %><br>
+  </div>
+
+  <!-- WEBSITE TO REST -->
+<div class="restwebsitelink">
+<%= link_to "#{ven_name}" , hash['venue']['url'] , id: 'ghost-button'%>
+<% if hash['venue']['menu'] != nil %>
+  <% if hash['venue']['menu']['mobileUrl'] != nil %>
+    <%=  link_to 'Menu' , hash['venue']['menu']['mobileUrl'], id: "ghost-button"%>
+  <% else %>
+    <%= hash['venue']['menu']['url'] %>
+  <% end %>
+<% else %>
+  <%= "Check Website" %>
+<% end %>
+</div>
+  <!-- ADD/LIKE BUTTONS -->
+  <div class="restfavbut">
+    <%= form_for @restaurant do |f| %>
+      <%= f.hidden_field :name, value: hash['venue']['name'] %>
+      <%= f.hidden_field :location, value: hash['venue']['location']['formattedAddress'].join %>
+      <%= f.hidden_field :menu_url, value: (hash['venue']['menu'] ? (hash['venue']['menu']['mobileUrl'] or hash['venue']['menu']['url']) : nil) %>
+      <%= f.hidden_field :photo_url, value: picture %>
+      <%= f.hidden_field :restaurantId, value: hash['venue']['id'] %>
+      <%= f.hidden_field :website, value: hash['venue']['url'] %>
+      <%= f.submit "Like", data: { confirm: 'Your confirm message' } ,id: 'ghost-button' %>
+    <% end %>
+  </div>
+<% end %>
+</div>

@@ -26,6 +26,7 @@ body {
    url('http://s3-us-west-1.amazonaws.com/prod-biut/wp-content/uploads/2015/12/23115654/helado5.jpg')
    no-repeat fixed 0 0 / cover;
 
+
 }
 // https://cdn.shutterstock.com/shutterstock/videos/8891473/thumb/1.jpg
 
@@ -147,9 +148,9 @@ body {
   width: 100%;
   padding: 0;
   margin: 0 auto;
+	overflow-x: hidden;
 
 }
-
 
 
 #lovequoteprofile {
@@ -428,15 +429,15 @@ h5 {
 
 
 //////////////NAV BAR///////////////////////////
-.navbarlogo {
+.navbarlogo_mainprof {
   font-family: 'Isabella Script';
   color: white;
   font-size: 61px;
-  padding: 24px 10px 15px;
+  padding: 7px 10px 15px;
 
 }
 
-.fixed-nav-bar {
+.fixed-nav-bar_mainprof {
   color: white;
   display:inline-flex;
   position: fixed;
@@ -450,15 +451,21 @@ h5 {
   text-align: center;
 }
 
-.fixed-nav-bar ul {
+ul.mainprof {
+	padding: 33px;
+  position: relative;
+  left: 193px;
+}
+
+.fixed-nav-bar_mainprof ul {
   color: white;
   font-family: 'Raleway';
   font-size: 25px;
   list-style-type: none;
   margin: 0;
-	padding: 32px;
+	padding: 33px;
   position: relative;
-  left: 225px;
+  left: 195px;
  }
 
 .fixed-nav-bar li {

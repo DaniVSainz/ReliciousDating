@@ -5,11 +5,12 @@
 
 <nav class="fixed-nav-bar">
   <span class="navbarlogo">Relicious</span>
-  <ul>
+  <ul class="mainprof">
   <li><%= link_to "Home" , profiles_path %></li>
   <li><%= link_to "Messages", mailbox_inbox_path%></li>
   <li><%= link_to "Search", restaurants_show_path %></li>
   <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+
   </ul>
 </nav>
 

@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .parallax {
-  
+
     background-image: url('http://www.sma-li.com/media/slide/image/cache/960x550-center/h/e/healthy-food_1.jpg');
     background-size: cover;
     height: 100vh;
@@ -15,6 +15,30 @@
     padding: 0;
     margin: 0;
     overflow-x: hidden;
+  }
+
+  .navbarlogo{
+  	font-family: 'Isabella Script';
+    color: white;
+    font-size: 61px;
+    padding: 24px 10px 15px;
+
+  }
+  .fixed-nav-bar ul {
+    color: white;
+    font-family: 'Raleway';
+    font-size: 25px;
+    list-style-type: none;
+    margin: 0;
+  	padding: 29px;
+    position: relative;
+    left: 225px;
+  	list-style: none;
+  	
+   }
+
+  .fixed-nav-bar ul a {
+  	text-decoration: none;
   }
 
 .img.img-circle.img-responsive {
