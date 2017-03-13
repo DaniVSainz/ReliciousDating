@@ -10,10 +10,10 @@
 //     });
 // }
 
-$( document ).ready(function(){
-  $('.chosen-select').chosen({
-      no_results_text: 'No results matched'
-  });
-});
+// $( document ).ready(function(){
+//   $('.chosen-select').chosen({
+//       no_results_text: 'No results matched'
+//   });
+// });
 
 // $(document).on("page:load",ready);
