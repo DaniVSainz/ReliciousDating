@@ -292,6 +292,119 @@ input.btn.btn-primary:hover {
 	background-color: rgba(165,222,109,.6);
 }
 
+// ABOUT US//
+
+.cd-main {
+  overflow-x: hidden;
+}
+.cd-main > * {
+  transition: transform 0.5s 0.4s;
+}
+.cd-main.fold-is-open > * {
+  /* on mobile - translate .cd-main content to the right when the .cd-folding-panel is open */
+  transform: translateX(100%);
+  transition: transform 0.5s 0s;
+}
+
+.cd-folding-panel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  visibility: hidden;
+  overflow: hidden;
+  transition: visibility 0s 0.9s;
+}
+.cd-folding-panel .fold-left,
+.cd-folding-panel .fold-right {
+  /* the :after elements of .fold-left and .fold-right are the 2 fold sides */
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  /* enable a 3D-space for children elements */
+  perspective: 2000px;
+}
+.cd-folding-panel .fold-right {
+  perspective-origin: 0% 50%;
+}
+.cd-folding-panel .fold-left {
+  /* on mobile only the right fold side is visible */
+  display: none;
+}
+.cd-folding-panel .fold-right::after {
+  /* 2 fold sides */
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transform-origin: right center;
+  transform: translateX(-100%) rotateY(-90deg);
+  transition: transform 0.5s 0.4s, background-color 0.5s 0.4s;
+}
+.cd-folding-panel.is-open {
+  visibility: visible;
+  transition: visibility 0s 0s;
+}
+.cd-folding-panel.is-open .fold-right::after {
+  transform: translateX(0);
+  transition: transform 0.5s 0s, background-color 0.5s 0s;
+}
+
+media only screen and (min-width: 1100px) {
+  .cd-item {
+    width: 50%;
+    float: left;
+    transition: transform 0.5s 0.4s;
+  }
+  .fold-is-open .cd-item {
+    transition: transform 0.5s 0s;
+    transform: translateX(-400px);
+  }
+  .fold-is-open .cd-item:nth-of-type(2n) {
+    transform: translateX(400px);
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  .cd-folding-panel {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 800px;
+  }
+  .cd-folding-panel .fold-left,
+  .cd-folding-panel .fold-right {
+    width: 50%;
+    float: left;
+    height: 100%;
+  }
+  .cd-folding-panel .fold-right {
+    /* change perspective-origin so that the 2 fold sides have the same vanishing point */
+    perspective-origin: 0% 50%;
+  }
+  .cd-folding-panel .fold-right::after {
+    transform-origin: right center;
+    transform: translateX(-100%) rotateY(-90deg);
+  }
+  .cd-folding-panel .fold-left {
+    display: block;
+    /* change perspective-origin so that the 2 fold sides have the same vanishing point */
+    perspective-origin: 100% 50%;
+  }
+  .cd-folding-panel .fold-left::after {
+    transform-origin: left center;
+    transform: translateX(100%) rotateY(90deg);
+  }
+  .cd-folding-panel.is-open .fold-right::after,
+  .cd-folding-panel.is-open .fold-left::after {
+    transform: translateX(0);
+    transition: transform 0.5s 0s, background-color 0.5s 0s;
+  }
+}
+
+
 //MEDIA QUERIES//
 /* ----------- iPhone 4 and 4S ----------- */
 

@@ -1,4 +1,4 @@
-<% if current_user.users != nil %>
+<!-- <% if current_user.users != nil %>
   <% user_matches = [] %>
   <% current_user.users.each do |user| %>
     <% if user_matches.include? user %>
@@ -6,14 +6,18 @@
       <% user_matches << user %>
     <% end %>
   <% end %>
-<% end %>
+<% end %> -->
 
 <!-- Unique users from loop above  -->
-<% user_matches.each do |user| %>
+<!-- <% user_matches.each do |user| %>
+<div class="wrap">
+  <div class="tile">
   <%= image_tag user.profile.avatar.url(:medium) %>
-  <%= user.profile.username%>
-  <%= user.profile.age %>
+    <div class="text">
+  <h1><%= user.profile.username%></h1>
+  <h2 class="animate-text">  <%= user.profile.bio%></h2>
+  <p class="animate-text"><%= user.profile.age %>
   <%= user.profile.gender %>
-  <% user.profile.gender_pref %>
-  <%= user.profile.bio%>
-<% end %>
+  <% user.profile.gender_pref %></p> -->
+
+<!-- <% end %> -->
