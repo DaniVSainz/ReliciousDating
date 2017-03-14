@@ -23,8 +23,9 @@ Rails.application.configure do
   # config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
-  config.serve_static_assets = true
   config.assets.compile = false
+  config.serve_static_assets = true
+
   # config.assets.paths << Rails.root.join('/app/assets/videos')
   # config.assets.paths << Rails.root.join('/app/assets/fonts')
   # config.assets.paths << Rails.root.join('/app/assets/stylesheets')
