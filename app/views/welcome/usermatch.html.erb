@@ -1,12 +1,15 @@
 <% if current_user.users != nil %>
   <% user_matches = [] %>
   <% current_user.users.each do |user| %>
+  <% if current_user.id != user.id %>
     <% if user_matches.include? user %>
     <% else %>
       <% user_matches << user %>
     <% end %>
   <% end %>
 <% end %>
+<% end %>
+
 <nav class="fixed-nav-bar">
   <span class="navbarlogo_mainprof">Relicious</span>
   <ul class="mainprof">
