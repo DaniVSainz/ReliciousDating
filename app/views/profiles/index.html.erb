@@ -10,7 +10,7 @@
   <li><%= link_to "Messages", mailbox_inbox_path%></li>
   <li><%= link_to "Search", restaurants_show_path %></li>
   <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
-
+  <li><%= link_to "Matches", welcome_usermatch_path %></li>
   </ul>
 </nav>
 
@@ -43,7 +43,7 @@
         <ul class="social-list">
           <li><%= link_to "Home" , profiles_path,class: "fa fa-facebook" %></li>
           <li><%= link_to "Messages", mailbox_inbox_path, class:"fa fa-facebook" %></li>
-          <li><a href="#" class="fa fa-facebook">Matches</a></li>
+          <li><%= link_to "Matches", welcome_usermatch_path,class: "fa fa-facebook" %></li>
           <li><a href="#" class="fa fa-dribbble">Change Photo</a></li>
           <li><%= link_to "Edit Bio","http://localhost:3000/profiles/#{current_user.profile.id}" ,class:"fa fa-pinterest" %></li>
           <li><a href="#" class="fa fa-linkedin">See Profile</a></li>
