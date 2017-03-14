@@ -8,12 +8,12 @@
 <ul class="inboxnavbuttonlinks">
 <li class="<%= active_page(:inbox) %>">
     <%= link_to mailbox_inbox_path do  %>
-       <span>inbox</span>
+       <span id="inbox1">inbox</span>
     <% end %>
   </li>
   <li class="<%= active_page(:sent) %>">
     <%= link_to mailbox_sent_path do %>
-        <span>sent</span>
+        <span id="sent2">sent</span>
     <% end %>
   </li>
   <li class="<%= active_page(:trash) %>">

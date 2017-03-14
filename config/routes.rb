@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root :to => 'profiles#index', as: :authenticated_root #Currently profiles show has a bug !!
   end
   root :to => 'welcome#index'
-  get "welcome/aboutus" => "welcome#aboutus" 
+  get "welcome/aboutus" => "welcome#aboutus"
   get "welcome/testfile" => "welcome#testfile"
   get "welcome/usermatch" => "welcome#usermatch"
   resources :restaurants
