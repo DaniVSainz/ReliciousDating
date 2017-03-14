@@ -594,12 +594,16 @@ sans-serif;
   box-sizing: border-box;
 }
 
-body {
+.aboutusbody {
   background-image: linear-gradient(to right, $regal-blue, $san-juan);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   height: 100vh;
   font-family: $open-sans;
+	height: 118vh;
+  overflow-y: auto;
+	margin: 0 auto;
+	padding: 0;
 }
 
 a {
