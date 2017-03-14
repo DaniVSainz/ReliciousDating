@@ -1024,3 +1024,5 @@ config-environements-production- config.cache_store = :memory_store <- <% cache 
                 <%end%>
 
                 ("searchbox", nil, id: "sbx", :placeholder => 'Enter restaurant search term')
+
+                    <%= image_tag(current_user.profile.avatar.url(:thumb)) %>

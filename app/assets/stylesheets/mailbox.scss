@@ -34,7 +34,7 @@
     position: relative;
     left: 225px;
   	list-style: none;
-  	
+
    }
 
   .fixed-nav-bar ul a {
@@ -89,20 +89,6 @@ left: 254px;
 }
 
 
-// label:hover {
-//   width:81px;
-//   transition-property:width;
-//   transition-duration:.4s;
-//   -webkit-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-//   span{
-//     opacity:1;
-//     transition-property:opacity;
-//     transition-duration:.2s;
-//     -webkit-transition-timing-function:linear;
-//     transition-delay:.3s;
-//   }
-// }
-
 span.navbarlogo {
 font-size: 61px;
 padding: 11px;
@@ -148,8 +134,29 @@ li.active>a  {
   list-style-type: none;
 }
 
+li.active>a:hover {
+  color: #e2f7ac;
+  text-decoration: none;
+}
+
+ul.inboxnavbuttonlinks a:hover {
+  color: #e2f7ac;
+  text-decoration: none;
+}
+
+ul.inboxnavbuttonlinks span:hover {
+  color: #e2f7ac;
+  text-decoration: none;
+}
+
+.fa-trash-o :hover {
+  color: #e2f7ac;
+  text-decoration: none;
+}
+
 ul.inboxnavbuttonlinks a{
   // padding: 30px;
+  text-decoration: none;
   padding: 28px;
   position: relative;
   // left: 254px;
@@ -164,8 +171,10 @@ ul.inboxnavbuttonlinks a{
 .inboxnavbuttonlinks {
 list-style: none;
 padding: 30px;
+height: 90px;
 background-color: #399F89;
 width: 70vw;
+border-radius: 2%;
 
 }
 .widget .list-group {

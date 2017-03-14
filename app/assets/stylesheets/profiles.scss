@@ -41,7 +41,7 @@ body {
 }
 
 .overlay {
-  height: 60vh;
+  height: 80vh;
   margin: 0 auto;
   width: 55vw;
   overflow: hidden;
@@ -64,19 +64,36 @@ body {
   }
 }
 
-// .questionbox {
-//   background-color: #C2E999;
-//   // background-color: #B6D276;
-//   // height: 66vh;
-//   // width: 60vw;
-//   margin:  auto;
-//   padding: 0;
-// }
 
 .donut {
-  height: 100px;
-  padding: 20px;
-  width: 115px;
+	height: 143px;
+	padding: 20px;
+	width: 159px;
+}
+
+.donut:hover {
+	animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
 }
 
 h1 {
@@ -120,14 +137,28 @@ h1 {
 }
 
 #profile_age {
-  width: 49vh;
+  width: 50vh;
   height: 5.4vh;
   border-radius: 6px;
   font-size: 16px;
   font-family: 'Raleway';
 }
 
+#profile_username {
+	width: 50vh;
+  height: 5.4vh;
+  border-radius: 6px;
+  font-size: 16px;
+  font-family: 'Raleway';
+}
 
+#profile_bio {
+	width: 50vh;
+  height: 5.4vh;
+  border-radius: 6px;
+  font-size: 16px;
+  font-family: 'Raleway';
+}
 
 //////CURRENT USER PROFILE PAGE///////////////
 
@@ -161,23 +192,6 @@ body {
   font-family: 'Parisienne', cursive;
 }
 
-.profilepic {
-
-}
-
-.profilemainnavbar {
-
-}
-
-.profilemaininfo {
-
-
-}
-
-.profileshowmatches {
-
-
-}
 
 /////////////////////////////////////// USER CARD
 
@@ -249,15 +263,16 @@ body {
 }
 .box-inner {
   padding: 30px;
+	overflow: hidden;
 }
 .avatar {
   -webkit-border-radius: 50%;
   border-radius: 50%;
   -webkit-box-shadow: 0 0 0 3px #c30eb8 , 0 0 0 8px #fff;
   box-shadow: 0 0 0 3px #c30eb8 , 0 0 0 8px #fff;
-  top: -155px;
+	top: -97px;
   margin-left: -135px;
-  left: 50%;
+  left: 235px;
   position: absolute;
 }
 .avatar img {
@@ -402,13 +417,13 @@ h5 {
   color: #fff;
 }
 .social-list > li > a:hover.fa-facebook {
-  background: #3b5998;
+  background: #ff3800;
 }
 .social-list > li > a:hover.fa-dribbble {
   background: #c32361;
 }
 .social-list > li > a:hover.fa-twitter {
-  background: #55acee;
+  background: #43deef;
 }
 .social-list > li > a:hover.fa-pinterest {
   background: #cd2129;

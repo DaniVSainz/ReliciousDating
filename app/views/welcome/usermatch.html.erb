@@ -10,10 +10,14 @@
 
 <!-- Unique users from loop above  -->
 <% user_matches.each do |user| %>
+<div class="wrap">
+  <div class="tile">
   <%= image_tag user.profile.avatar.url(:medium) %>
-  <%= user.profile.username%>
-  <%= user.profile.age %>
+    <div class="text">
+  <h1><%= user.profile.username%></h1>
+  <h2 class="animate-text">  <%= user.profile.bio%></h2>
+  <p class="animate-text"><%= user.profile.age %>
   <%= user.profile.gender %>
-  <% user.profile.gender_pref %>
-  <%= user.profile.bio%>
+  <% user.profile.gender_pref %></p>
+
 <% end %>
