@@ -17,3 +17,8 @@ Some of its key features are:
 -User authentication/encrypted passwords through the gem Devise.
 -User's had the option to upload images to have a profile pic.We passed the attachments through our servers validation before sending it to a AWS s3 bucket where they're hosted.
 
+![alt](https://github.com/DaniVSainz/ReliciousDating/blob/master/home-page.png)
+![alt](https://github.com/DaniVSainz/ReliciousDating/blob/master/login.png)
+![alt](https://github.com/DaniVSainz/ReliciousDating/blob/master/Profile.png)
+![alt](https://github.com/DaniVSainz/ReliciousDating/blob/master/Rest-search.png)
+![alt](https://github.com/DaniVSainz/ReliciousDating/blob/master/erd.pdf)
