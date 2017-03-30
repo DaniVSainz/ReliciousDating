@@ -1,24 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A twist on dating websites in the era of online dating.Relicious allows users to match themselves with other users by restaurants they like.
 
-Things you may want to cover:
+Some of its key features are:
 
-* Ruby version
+-Private messaging between matched users.
+-Restaurant search page that returned venues by terms you searched(Food types, restaurant name etc).These results were obtained through Foursquare's API.
+-User authentication/encrypted passwords through the gem Devise.
+-User's had the option to upload images to have a profile pic.We passed the attachments through our servers validation before sending it to a AWS s3 bucket where they're hosted.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
