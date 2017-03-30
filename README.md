@@ -1,11 +1,11 @@
 # README
 
-Relicious was made over 2 weeks by
-Anika Abreu
-https://github.com/anikaabreu
+Relicious was made over 2 weeks by  
+Anika Abreu  
+https://github.com/anikaabreu  
 
-Daniel Villegas
-https://github.com/danivsainz
+Daniel Villegas  
+https://github.com/danivsainz  
 
 
 A twist on dating websites in the era of online dating.Relicious allows users to match themselves with other users by restaurants they like.
