@@ -1,6 +1,7 @@
 # README
 
-Relicious was made over 2 weeks by  
+Relicious was made over 2 weeks by:    
+
 Anika Abreu  
 https://github.com/anikaabreu  
 
