@@ -27,7 +27,6 @@ padding-bottom: 50px;
 padding-top: 50px;
 }
 .ParallaxVideo video{
-height: 100vh;
 min-width: 100%;
 position: fixed;
 top:0;
@@ -316,6 +315,9 @@ input.btn.btn-primary:hover {
     .logo {
       font-size: 7.5em;
     }
+		.ParallaxVideo {
+		height: 100vh;
+		}
 }
 
 /* Landscape */
@@ -342,6 +344,7 @@ input.btn.btn-primary:hover {
       bottom: 26px;
       margin: 187px auto;
     }
+
 }
 
 /* Portrait */
@@ -350,10 +353,15 @@ input.btn.btn-primary:hover {
   and (max-device-width: 568px)
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) {
+	.logo {
     font-size: 7em;
     position: relative;
     bottom: 26px;
     margin: 187px auto;
+}
+.ParallaxVideo {
+height: 100vh;
+}
 }
 
 /* Landscape */
@@ -389,6 +397,9 @@ input.btn.btn-primary:hover {
     .logo {
       font-size: 7.5em;
     }
+		.ParallaxVideo {
+		height: 100vh;
+		}
 }
 
 /* Landscape */
@@ -409,6 +420,10 @@ input.btn.btn-primary:hover {
   and (min-device-width: 414px)
   and (max-device-width: 736px)
   and (-webkit-min-device-pixel-ratio: 3) {
+		.ParallaxVideo {
+		height: 100vh;
+		}
+
     .logo {
       font-size: 8.5em;
     }
@@ -431,6 +446,9 @@ input.btn.btn-primary:hover {
   and (max-device-width: 736px)
   and (-webkit-min-device-pixel-ratio: 3)
   and (orientation: landscape) {
+		.ParallaxVideo {
+		height: 100vh;
+		}
     .logo {
       font-size: 8.5em;
     }
@@ -454,6 +472,9 @@ and (max-device-width : 1024px)  {
     left: 117px;
     font-size: 19.5em;
   }
+	.ParallaxVideo {
+	height: 100vh;
+	}
 }
 /* ----------- Galaxy S3 ----------- */
 
@@ -462,6 +483,9 @@ and (max-device-width : 1024px)  {
   and (device-width: 320px)
   and (device-height: 640px)
   and (-webkit-device-pixel-ratio: 2) {
+		.ParallaxVideo {
+		height: 100vh;
+		}
 
     .logo {
       font-size: 7.5em;
@@ -474,6 +498,9 @@ and (max-device-width : 1024px)  {
   and (device-height: 640px)
   and (-webkit-device-pixel-ratio: 2)
   and (orientation: portrait) {
+		.ParallaxVideo {
+		height: 100vh;
+		}
     .logo {
       font-size: 7.5em;
     }
@@ -485,6 +512,7 @@ and (max-device-width : 1024px)  {
   and (device-height: 640px)
   and (-webkit-device-pixel-ratio: 2)
   and (orientation: landscape) {
+
     .logo {
       font-size: 7.5em;
     }
@@ -497,6 +525,9 @@ and (max-device-width : 1024px)  {
   and (device-width: 320px)
   and (device-height: 640px)
   and (-webkit-device-pixel-ratio: 3) {
+		.ParallaxVideo {
+		height: 100vh;
+		}
     .logo {
       font-size: 7.5em;
     }
@@ -531,6 +562,9 @@ and (max-device-width : 1024px)  {
   and (device-width: 360px)
   and (device-height: 640px)
   and (-webkit-device-pixel-ratio: 3) {
+		.ParallaxVideo {
+		height: 100vh;
+		}
     .logo {
       font-size: 7.5em;
       margin: 207px auto;
