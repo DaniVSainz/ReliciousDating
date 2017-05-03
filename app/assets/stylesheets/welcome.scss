@@ -41,6 +41,8 @@ font-weight: bold;
 font-family: 'Raleway';
 }
 
+
+
 h1.reliciouslogotag {
   color: #FFFCF0;
   font-weight: 500;
@@ -300,10 +302,10 @@ input.btn.btn-primary:hover {
   and (min-device-width: 320px)
   and (max-device-width: 480px)
   and (-webkit-min-device-pixel-ratio: 2) {
-    .logo {
-      font-size: 7.5em;
-    }
 
+		video {
+			height:100vh;
+		}
 }
 
 /* Portrait */
@@ -315,8 +317,16 @@ input.btn.btn-primary:hover {
     .logo {
       font-size: 7.5em;
     }
-		.ParallaxVideo {
-		height: 100vh;
+		.ParallaxVideo h1 {
+		color: #fff;
+		font-size: 52px;
+		}
+
+		video {
+			height:100vh;
+		}
+		.ParallaxVideo{
+		font-size: 34px;
 		}
 }
 
@@ -338,12 +348,9 @@ input.btn.btn-primary:hover {
   and (min-device-width: 320px)
   and (max-device-width: 568px)
   and (-webkit-min-device-pixel-ratio: 2) {
-    .logo {
-      font-size: 7em;
-      position: relative;
-      bottom: 26px;
-      margin: 187px auto;
-    }
+		video {
+			height:100vh;
+		}
 
 }
 
@@ -359,8 +366,16 @@ input.btn.btn-primary:hover {
     bottom: 26px;
     margin: 187px auto;
 }
-.ParallaxVideo {
-height: 100vh;
+.ParallaxVideo h1 {
+color: #fff;
+font-size: 52px;
+}
+
+video {
+	height:100vh;
+}
+.ParallaxVideo{
+font-size: 34px;
 }
 }
 
@@ -383,9 +398,9 @@ height: 100vh;
   and (min-device-width: 375px)
   and (max-device-width: 667px)
   and (-webkit-min-device-pixel-ratio: 2) {
-    .logo {
-      font-size: 7.5em;
-    }
+		video {
+			height:100vh;
+		}
 }
 
 /* Portrait */
@@ -397,8 +412,16 @@ height: 100vh;
     .logo {
       font-size: 7.5em;
     }
-		.ParallaxVideo {
-		height: 100vh;
+		.ParallaxVideo h1 {
+		color: #fff;
+		font-size: 52px;
+		}
+
+		video {
+			height:100vh;
+		}
+		.ParallaxVideo{
+		font-size: 34px;
 		}
 }
 
@@ -420,13 +443,9 @@ height: 100vh;
   and (min-device-width: 414px)
   and (max-device-width: 736px)
   and (-webkit-min-device-pixel-ratio: 3) {
-		.ParallaxVideo {
-		height: 100vh;
+		video {
+			height:100vh;
 		}
-
-    .logo {
-      font-size: 8.5em;
-    }
 }
 
 /* Portrait */
@@ -438,6 +457,17 @@ height: 100vh;
     .logo {
       font-size: 8.5em;
     }
+		.ParallaxVideo h1 {
+		color: #fff;
+		font-size: 52px;
+		}
+
+		video {
+			height:100vh;
+		}
+		.ParallaxVideo{
+		font-size: 34px;
+		}
 }
 
 /* Landscape */
@@ -446,14 +476,16 @@ height: 100vh;
   and (max-device-width: 736px)
   and (-webkit-min-device-pixel-ratio: 3)
   and (orientation: landscape) {
-		.ParallaxVideo {
-		height: 100vh;
+		video {
+			height:100vh;
 		}
     .logo {
       font-size: 8.5em;
     }
 }
 
+
+////////ipad////////
 @media only screen
 and (min-device-width : 768px)
 and (max-device-width : 1024px)  {
@@ -472,9 +504,18 @@ and (max-device-width : 1024px)  {
     left: 117px;
     font-size: 19.5em;
   }
-	.ParallaxVideo {
-	height: 100vh;
+	.ParallaxVideo h1 {
+	color: #fff;
+	font-size: 52px;
 	}
+
+	video {
+		height:100vh;
+	}
+	.ParallaxVideo{
+	font-size: 34px;
+	}
+
 }
 /* ----------- Galaxy S3 ----------- */
 
@@ -483,13 +524,9 @@ and (max-device-width : 1024px)  {
   and (device-width: 320px)
   and (device-height: 640px)
   and (-webkit-device-pixel-ratio: 2) {
-		.ParallaxVideo {
-		height: 100vh;
+		video {
+			height:100vh;
 		}
-
-    .logo {
-      font-size: 7.5em;
-    }
 }
 
 /* Portrait */
@@ -498,12 +535,21 @@ and (max-device-width : 1024px)  {
   and (device-height: 640px)
   and (-webkit-device-pixel-ratio: 2)
   and (orientation: portrait) {
-		.ParallaxVideo {
-		height: 100vh;
-		}
+
     .logo {
       font-size: 7.5em;
     }
+		.ParallaxVideo h1 {
+		color: #fff;
+		font-size: 52px;
+		}
+
+		video {
+			height:100vh;
+		}
+		.ParallaxVideo{
+		font-size: 34px;
+		}
 }
 
 /* Landscape */
@@ -512,7 +558,9 @@ and (max-device-width : 1024px)  {
   and (device-height: 640px)
   and (-webkit-device-pixel-ratio: 2)
   and (orientation: landscape) {
-
+		video {
+			height:100vh;
+		}
     .logo {
       font-size: 7.5em;
     }
@@ -525,12 +573,9 @@ and (max-device-width : 1024px)  {
   and (device-width: 320px)
   and (device-height: 640px)
   and (-webkit-device-pixel-ratio: 3) {
-		.ParallaxVideo {
-		height: 100vh;
+		video {
+			height:100vh;
 		}
-    .logo {
-      font-size: 7.5em;
-    }
 }
 
 /* Portrait */
@@ -542,6 +587,17 @@ and (max-device-width : 1024px)  {
     .logo {
       font-size: 7.5em;
     }
+		.ParallaxVideo h1 {
+		color: #fff;
+		font-size: 52px;
+		}
+
+		video {
+			height:100vh;
+		}
+		.ParallaxVideo{
+		font-size: 34px;
+		}
 }
 
 /* Landscape */
@@ -562,15 +618,9 @@ and (max-device-width : 1024px)  {
   and (device-width: 360px)
   and (device-height: 640px)
   and (-webkit-device-pixel-ratio: 3) {
-		.ParallaxVideo {
-		height: 100vh;
+		video {
+			height:100vh;
 		}
-    .logo {
-      font-size: 7.5em;
-      margin: 207px auto;
-      position: relative;
-      left: 41px;
-    }
 }
 /* Portrait */
 @media screen
@@ -584,6 +634,17 @@ and (max-device-width : 1024px)  {
       position: relative;
       left: 41px;
     }
+		.ParallaxVideo h1 {
+		color: #fff;
+		font-size: 52px;
+		}
+
+		video {
+			height:100vh;
+		}
+		.ParallaxVideo{
+		font-size: 34px;
+		}
 }
 
 /* Landscape */
@@ -599,6 +660,9 @@ and (max-device-width : 1024px)  {
       left: 41px;
     }
 }
+
+
+
 
 
 ///////////////////////////////////////////////////////
